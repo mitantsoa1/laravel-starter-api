@@ -1,0 +1,1304 @@
+{
+    "meta": {
+        "total": 204,
+        "filtered": 9,
+        "page": 1,
+        "perPage": 9
+    },
+    "data": [
+        {
+            "id": "69172361c35d2605b36eea5e",
+            "slug": "lumena-alta-by-omniyat",
+            "name": "Lumena Alta by Omniyat",
+            "status": "published",
+            "location": {
+                "emirate": "Dubai",
+                "area": "AL WASL",
+                "areaSlug": "al-wasl",
+                "coordinates": {
+                    "lat": 25.1897649,
+                    "lng": 55.25975520000001
+                }
+            },
+            "developer": {
+                "id": "670e487ea1f0892c444f1961",
+                "name": "Omniyat",
+                "logo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/developer/97e43b0c-f469-2285-a410-07a79aec4867.png"
+            },
+            "pricing": {
+                "startingFrom": 19000000,
+                "currency": "AED"
+            },
+            "completion": {
+                "date": "2030-12-31",
+                "quarter": "Q4 2030"
+            },
+            "paymentPlan": {
+                "type": "full_payment_on_delivery",
+                "booking": 20,
+                "construction": {
+                    "percent": 30,
+                    "months": 36
+                },
+                "completion": 50,
+                "postHandover": null
+            },
+            "units": [
+                {
+                    "type": "Commercial",
+                    "bedrooms": null,
+                    "startingPrice": 19000000,
+                    "sizeSqFt": null,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/4721cfe8-ddb7-4df0-b62b-2ac6ad9d5846.png"
+                }
+            ],
+            "description": {
+                "short": "Lumena Alta lives up to its name, a fusion of lumen, meaning radiant brilliance, and alta, symbolizing elevation and ambition. It represents a new benchmark of visionary design in Dubai, where...",
+                "full": "Lumena Alta lives up to its name, a fusion of lumen, meaning radiant brilliance, and alta, symbolizing elevation and ambition. It represents a new benchmark of visionary design in Dubai, where illumination, innovation, and architectural sophistication rise together into the skyline.Set at the gateway of Business Bay and moments from Downtown Dubai and DIFC, this future-focused mixed-use tower features a striking twisted façade and an elevated lifestyle ecosystem crafted for modern business excellence. Rising 380 metres, Lumena Alta offers 45 floors of flexible, shell-and-core office spaces complemented by private terraces, sky gardens, and thoughtfully curated executive amenities.Invest with a Partner Who Puts You FirstInvesting in Dubai’s real estate shouldn’t feel uncertain—it should feel empowering. At Alba Homes, we tackle the common frustrations of investors head-on, offering a transparent, streamlined approach that brings clarity and confidence to every step. Our mission is to simplify complex decisions, eliminate hidden costs, and align every property with your financial goals.With Alba Homes, you’re not just buying property; you’re gaining a trusted partner dedicated to maximizing your returns through integrity, insight, and purpose. Discover how empowering real estate investment can be with a team that truly prioritizes your success."
+            },
+            "media": {
+                "logo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/4bdf0f31-0ed9-2436-56b5-472666a535b3.png",
+                "primary": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/abf29374-c7d1-e4cc-4b54-677da6003c71.png",
+                "header": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/1d51ac62-9a5c-b887-6e3d-26cf2f12b2ed.png",
+                "priceSheet": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/1ddc48f4-71eb-782a-073d-1686c8e50d3b.png",
+                "gallery": [
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/f9408e16-3340-dd33-f74b-a83c61baff26.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/9525812f-f521-5375-27ea-318e3d6e674f.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/1a195b29-8046-e925-e415-31841981301b.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/1a66ab29-b6c7-2e6d-010d-a0ce343b52d0.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/373225ea-28d6-ed9a-0d6f-b4cae4c04a3d.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/53b5d9ef-7442-8a4d-f59a-9663a2af53cd.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/7d380df8-1472-cbde-6986-d9c129c39ce5.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/3bfd80a6-2c7c-2730-78e2-0bbd925dfa5f.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/e1426c50-6cb7-0137-d4cc-172344217d37.png"
+                ],
+                "video": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/videos/0cb9b3e6-5235-204a-a21f-b1a8be5a6b69.mp4",
+                "brochure": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/6edff773-d6f5-734a-c6ae-c0a07372e840.pdf"
+            },
+            "amenities": [
+                {
+                    "name": "Sky Pool & Bar",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/0ddda624-0c4b-d724-611e-c94dec028a52.png"
+                },
+                {
+                    "name": "Wellness & Spa Facitilities",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/58f72a42-287e-b021-9614-c19cf83c287a.png"
+                },
+                {
+                    "name": "Conference & Events Space",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/863ba7c4-8dfe-67cc-f0bc-bfc54c15b13f.png"
+                },
+                {
+                    "name": "High Performance Gym & Pool",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/a78df0e8-5593-8eeb-b0cd-912dfce040c7.png"
+                },
+                {
+                    "name": "Sky Lobby & Deck",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/360b4afb-569a-915b-81d0-857387b87a3a.png"
+                },
+                {
+                    "name": "Outdoor Rejuvenation Terraces",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/2f358dc6-7f70-0157-ec39-56416fd071c2.jpg"
+                },
+                {
+                    "name": "Executive Fitness Centre",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/a4c7e2ef-610a-4812-9f66-4868b4bbb685.png"
+                },
+                {
+                    "name": "Barista Lounges",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/8143a435-afbe-9fe7-e9b1-a9fd0d8d1a73.png"
+                },
+                {
+                    "name": "Co-working Facilities",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/eb12e7d1-4da5-3e3c-a8ec-9fc1b785eaa2.png"
+                },
+                {
+                    "name": "Executive Business Centre",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/9b1546e1-cb76-458a-5189-5b2c4c069e94.png"
+                }
+            ],
+            "tags": [],
+            "keywords": [
+                "Office ",
+                "Office space",
+                "Business Bay",
+                "Omniyat",
+                "Luxury",
+                "Dubai",
+                "Uae",
+                "Commercial Space",
+                "Lumena",
+                "Lumena Alta",
+                "Lumena Alta by Omniyat",
+                "Omniyat Lumena Alta",
+                "Commercial",
+                "Business Centre",
+                "Business Center"
+            ],
+            "seo": {
+                "title": "Lumena Alta by Omniyat | Alba Homes Real Estate Broker L.L.C",
+                "description": "Lumena Alta by Omniyat | Alba Homes Real Estate Broker L.L.C"
+            },
+            "timestamps": {
+                "created": "2025-11-14T12:41:05.348Z",
+                "updated": "2025-11-14T13:30:28.637Z"
+            }
+        },
+        {
+            "id": "690cb132c35d2605b36c454f",
+            "slug": "hq-by-rove",
+            "name": "HQ by Rove",
+            "status": "published",
+            "location": {
+                "emirate": "Dubai",
+                "area": "DUBAI DESIGN DISTRICT",
+                "areaSlug": "dubai-design-district",
+                "coordinates": {
+                    "lat": 25.1920236,
+                    "lng": 55.2911881
+                }
+            },
+            "developer": {
+                "id": "690f49c7c35d2605b36ce697",
+                "name": "IRTH",
+                "logo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/developer/cf5ae85f-6f6e-a87b-4b31-3b646ac6aef0.png"
+            },
+            "pricing": {
+                "startingFrom": 2937000,
+                "currency": "AED"
+            },
+            "completion": {
+                "date": "2029-06-06",
+                "quarter": "Q2 2029"
+            },
+            "paymentPlan": {
+                "type": "full_payment_on_delivery",
+                "booking": 15,
+                "construction": {
+                    "percent": 5,
+                    "months": 36
+                },
+                "completion": 50,
+                "postHandover": null
+            },
+            "units": [
+                {
+                    "type": "Office Space",
+                    "bedrooms": null,
+                    "startingPrice": 2937000,
+                    "sizeSqFt": 680,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/ae756d6b-9a17-4412-a82a-b14c6eaa92ca.png"
+                }
+            ],
+            "description": {
+                "short": "HQ by Rove introduces a new era of workspaces in Dubai with its fully furnished modular and loft office collections. Designed for flexibility and growth, businesses can choose from adaptable modular...",
+                "full": "HQ by Rove introduces a new era of workspaces in Dubai with its fully furnished modular and loft office collections. Designed for flexibility and growth, businesses can choose from adaptable modular offices or the first-of-its-kind lofts featuring premium double-height layouts with modern comforts such as walk-in closets, pantries, and rest areas. Each space includes a private outdoor courtyard, smart furniture, and thoughtfully crafted interiorsMore than an office building, HQ by Rove is a holistic work-life ecosystem spanning over 120,000 sqft of lifestyle amenities.. Developed in collaboration with IRTH Group, HQ by Rove blends hospitality, design, and innovation to create a dynamic, future-ready workspace that redefines how professionals live, work, and connect in Dubai.Invest with a Partner Who Puts You FirstInvesting in Dubai’s real estate shouldn’t feel uncertain—it should feel empowering. At Alba Homes, we tackle the common frustrations of investors head-on, offering a transparent, streamlined approach that brings clarity and confidence to every step. Our mission is to simplify complex decisions, eliminate hidden costs, and align every property with your financial goals.With Alba Homes, you’re not just buying property; you’re gaining a trusted partner dedicated to maximizing your returns through integrity, insight, and purpose. Discover how empowering real estate investment can be with a team that truly prioritizes your success."
+            },
+            "media": {
+                "logo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/94dd8187-c5d0-7db2-f58b-c6c8e4469c57.png",
+                "primary": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/d39e0627-cd3d-c6dc-7b1e-2196461d5994.png",
+                "header": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/9a0db82d-5bd0-c5ae-08ed-67ed5f21f976.png",
+                "priceSheet": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/53d79740-a08f-e1a3-1284-eed635ccbaf1.png",
+                "gallery": [
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/84811ae9-7feb-1fd5-4016-b86b3c2f1710.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/927aea14-df4f-944b-a0cf-651ab5b56277.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/3547364e-d9c6-0100-bc01-f4f9e2e645a7.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/b7ac02a1-75ae-54bd-61fd-880bd9e9a4bf.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/8cc5484f-0157-7436-548d-bc4ce7111172.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/066be0f2-d9f5-46d4-251f-b1febdf8563c.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/05bbaaae-e171-4d14-1c63-3f82443ef5a5.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/d11df3b5-5478-b40e-20e8-e1104c64ebc4.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/6e147d62-26b6-3aa5-6d8f-a61ed55f8b84.png"
+                ],
+                "video": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/videos/ea914a0b-c583-ef36-0f8f-8286cca21dd2.mov",
+                "brochure": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/32d8b6a1-1e4e-1fa3-2ab8-99179d4ea06e.pdf"
+            },
+            "amenities": [
+                {
+                    "name": "Fully-Fitted Gym",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/d6acfe33-19d1-8fef-cb17-d2c0bc7bdc7d.png"
+                },
+                {
+                    "name": "Library",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/aab6105a-93cc-6c4d-436a-9cb4dee1ea87.png"
+                },
+                {
+                    "name": "Coffee Corner",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/d7e0f71f-17a0-359e-bace-bc417c425ab3.png"
+                },
+                {
+                    "name": "Running Track",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/0738a178-207a-d394-3a41-3f49a6d18b0d.png"
+                },
+                {
+                    "name": "Play & Pause Zone",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/ecf7a4a4-5084-dd0f-969d-19b08884bb57.png"
+                },
+                {
+                    "name": "Yoga Space",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/dafdbd40-cb25-e126-1a83-6d0955e179b1.png"
+                },
+                {
+                    "name": "Floating Treehouse Pods",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/7361fdde-29e0-b8c7-ad94-c78f54f80737.png"
+                },
+                {
+                    "name": "Paddel Court",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/ebec5d9e-588b-1d50-f769-c97004ad585f.png"
+                },
+                {
+                    "name": "Basketball Court",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/d1c623de-7b4e-6454-3b98-f7ab132f24d0.png"
+                },
+                {
+                    "name": "Massage Room",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/11217432-a46f-3e3b-bb65-8596591d5f64.png"
+                }
+            ],
+            "tags": [],
+            "keywords": [
+                "Office",
+                "Commercial",
+                "Offices",
+                "Office space",
+                "Offices spaces",
+                "Office Spaces",
+                "Alba Homes",
+                "IRTH",
+                "HQ by Rove",
+                "HQ",
+                "HQ by IRTH",
+                "MARASI BAY",
+                "DUBAI OFFICE",
+                "Dubai Commercial"
+            ],
+            "seo": {
+                "title": "HQ by Rove | Alba Homes Real Estate Broker L.L.C",
+                "description": "HQ by Rove introduces a new era of workspaces in Dubai with its fully furnished modular and loft office collections. Designed for flexibility and growth, businesses can choose from adaptable modular offices or the first-of-its-kind lofts featuring premium double-height layouts with modern comforts such as walk-in closets, pantries, and rest areas. Each space includes a private outdoor courtyard, smart furniture, and thoughtfully crafted interiors\n\nMore than an office building, HQ by Rove is a holistic work-life ecosystem spanning over 120,000 sqft of lifestyle amenities.. Developed in collaboration with IRTH Group, HQ by Rove blends hospitality, design, and innovation to create a dynamic, future-ready workspace that redefines how professionals live, work, and connect in Dubai."
+            },
+            "timestamps": {
+                "created": "2025-11-06T14:31:14.603Z",
+                "updated": "2025-11-08T14:32:20.045Z"
+            }
+        },
+        {
+            "id": "6909d759c35d2605b36b3234",
+            "slug": "eywa-2---way-of-water",
+            "name": "EYWA 2 - Way of Water",
+            "status": "published",
+            "location": {
+                "emirate": "Dubai",
+                "area": "BUSINESS BAY",
+                "areaSlug": "business-bay",
+                "coordinates": {
+                    "lat": 25.1829588,
+                    "lng": 55.273743
+                }
+            },
+            "developer": {
+                "id": "673703c4d578f9065c20e14b",
+                "name": "R.evolution",
+                "logo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/developer/b49c3e82-49f9-193e-9e65-48359bf541e0.png"
+            },
+            "pricing": {
+                "startingFrom": 8900000,
+                "currency": "AED"
+            },
+            "completion": {
+                "date": "2028-06-30",
+                "quarter": "Q2 2028"
+            },
+            "paymentPlan": {
+                "type": "full_payment_on_delivery",
+                "booking": 20,
+                "construction": {
+                    "percent": 10,
+                    "months": 24
+                },
+                "completion": 40,
+                "postHandover": null
+            },
+            "units": [
+                {
+                    "type": "Apartment",
+                    "bedrooms": "2",
+                    "startingPrice": 8900000,
+                    "sizeSqFt": null,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/4743ccd8-614a-4d47-84d3-ef9cd2baffcb.png"
+                },
+                {
+                    "type": "Apartment",
+                    "bedrooms": "3",
+                    "startingPrice": 22100000,
+                    "sizeSqFt": 4791,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/3d0e8600-fe6e-41c6-8953-5e22a9b9ec2e.png"
+                },
+                {
+                    "type": "Apartment",
+                    "bedrooms": "4",
+                    "startingPrice": 35800000,
+                    "sizeSqFt": 5693,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/9f8f4b08-9bf7-4e30-8da8-2815e10885be.jpg"
+                }
+            ],
+            "description": {
+                "short": "EYWA 2 – Way of Water by R•EvolutionEYWA 2 - Way of Water is a visionary residential landmark by R.Evolution, set along the tranquil Dubai Water Canal in Business Bay. Rising nineteen storeys above...",
+                "full": "EYWA 2 – Way of Water by R•EvolutionEYWA 2 - Way of Water is a visionary residential landmark by R.Evolution, set along the tranquil Dubai Water Canal in Business Bay. Rising nineteen storeys above the city, Eywa reimagines modern luxury through the harmony of nature, architecture, and holistic wellness. With only sixty-five exclusive residences, including elegant two to five-bedroom apartments, duplexes, and a penthouse, it offers a rare blend of sophistication, serenity, and conscious living.Drawing inspiration from the fluid essence of water and the sacred wisdom of nature, Eywa embodies balance, rejuvenation, and timeless beauty. The development seamlessly combines sustainable design, organic forms, and advanced wellness technologies to create a living experience that nurtures both body and soul.Invest with a Partner Who Puts You FirstInvesting in Dubai’s real estate shouldn’t feel uncertain—it should feel empowering. At Alba Homes, we tackle the common frustrations of investors head-on, offering a transparent, streamlined approach that brings clarity and confidence to every step. Our mission is to simplify complex decisions, eliminate hidden costs, and align every property with your financial goals.With Alba Homes, you’re not just buying property; you’re gaining a trusted partner dedicated to maximizing your returns through integrity, insight, and purpose. Discover how empowering real estate investment can be with a team that truly prioritizes your success."
+            },
+            "media": {
+                "logo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/b6725df5-15a9-a309-8585-ad000c213f6f.png",
+                "primary": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/7e4f8d52-3473-fda6-e936-51c38d0721dc.png",
+                "header": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/47a5cbc1-d1ef-4ba4-a25a-671c25cf1f97.png",
+                "priceSheet": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/e38e910b-2a44-9ed5-2837-942272ce38cf.png",
+                "gallery": [
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/904816e1-29f9-7cf8-2b84-15f5d454137d.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/ad04f53e-7918-d172-c444-a56112368b21.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/c968229e-3eaf-cb9f-7d5c-2f54dbcf147c.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/9fd1efc6-fbe1-dd31-ebc3-f936b3bd8c11.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/65ba0cd0-8867-12ab-bbaa-5cc688084f8c.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/ff597db1-7755-e0ec-0cd8-9e2ab3ddb2c4.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/972f4d95-78cd-8f2d-bb72-d54dd6aed441.png"
+                ],
+                "video": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/videos/88d736e8-4f73-e000-3544-785eeec8e06b.mp4",
+                "brochure": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/0cf37b49-dfcf-fcbc-c107-b3d8dd4d99f7.pdf"
+            },
+            "amenities": [
+                {
+                    "name": "Fittness & Wellness Studio",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/52d89480-af54-a024-f181-a8103eae081e.png"
+                },
+                {
+                    "name": "Sound Vibration Harmonised Living Water",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/23aa8854-af64-8d38-e575-41d3a75d655c.png"
+                },
+                {
+                    "name": "Infrared Sauna",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/0a0f19fa-9aec-be64-f009-05242501a4c0.png"
+                },
+                {
+                    "name": "Wellness Spa Retreat",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/c9fedf7c-3431-bd9c-818e-3ab4be1dd691.png"
+                },
+                {
+                    "name": "Floating Vapor Fireplace Island",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/dd4e1fc9-fbe4-b4ef-a839-084dcaef14a3.png"
+                },
+                {
+                    "name": "The Lobby nest & Library",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/70c05c3c-fbba-6075-3b78-bbbfb5c7c295.png"
+                },
+                {
+                    "name": "Exclusive Clubhouse",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/d4f4593b-f155-a5d3-84f8-743fd08a78ac.png"
+                },
+                {
+                    "name": "Children’s Activity Center ",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/63e8fa4a-ccab-9a4f-b50e-9b8a533d5a43.png"
+                },
+                {
+                    "name": "Crystal Garden",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/907c281e-af13-009c-e7d1-68c7bb40072c.png"
+                },
+                {
+                    "name": "Meditation Labyrinth",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/d87ca9d2-fa54-f96c-a250-8355f0854c3e.png"
+                }
+            ],
+            "tags": [
+                "Luxury Living",
+                "Waterfront"
+            ],
+            "keywords": [
+                "Eywa",
+                "Eywa 2",
+                "Eywa 2  way of water",
+                "way of water eywa",
+                "2 bed",
+                "2 bedroom",
+                "3 bed",
+                "3 bedroom",
+                "4 bedroom",
+                "luxury",
+                "r.evolution",
+                "revolution",
+                "marasi drive",
+                "dubai",
+                "apartments ",
+                "vastu",
+                "business bay",
+                "downtown",
+                "bilionaire street",
+                "dubai canal",
+                "alba homes",
+                "alba",
+                "alba homes real estate broker LLC"
+            ],
+            "seo": {
+                "title": "EYWA 2 - Way of Water | Alba Homes Real Estate Broker L.L.C",
+                "description": "EYWA 2 - Way of Water | Alba Homes Real Estate Broker L.L.C"
+            },
+            "timestamps": {
+                "created": "2025-11-04T10:37:13.811Z",
+                "updated": "2025-11-04T12:47:01.913Z"
+            }
+        },
+        {
+            "id": "68ea42bfd8d5d7db4c3146e1",
+            "slug": "seraph-by-wadan",
+            "name": "Seraph by WADAN",
+            "status": "published",
+            "location": {
+                "emirate": "Dubai",
+                "area": "WADI AL SAFA",
+                "areaSlug": "wadi-al-safa",
+                "coordinates": {
+                    "lat": 25.0905489,
+                    "lng": 55.3844116
+                }
+            },
+            "developer": {
+                "id": "68d7f356a3e8e068ed135247",
+                "name": "WADAN Developments",
+                "logo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/developer/ad4c12f3-01dd-bf65-74ff-265cbf87c521.png"
+            },
+            "pricing": {
+                "startingFrom": 1043000,
+                "currency": "AED"
+            },
+            "completion": {
+                "date": "2027-12-31",
+                "quarter": "Q4 2027"
+            },
+            "paymentPlan": {
+                "type": "post_handover",
+                "booking": 15,
+                "construction": {
+                    "percent": 5,
+                    "months": 19
+                },
+                "completion": 10,
+                "postHandover": {
+                    "percent": 2.5,
+                    "months": 25
+                }
+            },
+            "units": [
+                {
+                    "type": "Apartment",
+                    "bedrooms": "1",
+                    "startingPrice": 1043000,
+                    "sizeSqFt": 795,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/786808a4-305e-431e-b2f8-9a5a0261a1c7.png"
+                },
+                {
+                    "type": "Apartment",
+                    "bedrooms": "2",
+                    "startingPrice": 1584000,
+                    "sizeSqFt": 1399,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/a86ad15b-c289-461c-9be7-925fb3775041.png"
+                }
+            ],
+            "description": {
+                "short": "Seraph by Wadan Developments is a refined residential project in Dubailand (DLRC), offering stylish studios, 1- and 2-bedroom apartments. This 13-storey mid-rise development showcases modern...",
+                "full": "Seraph by Wadan Developments is a refined residential project in Dubailand (DLRC), offering stylish studios, 1- and 2-bedroom apartments. This 13-storey mid-rise development showcases modern architecture with sleek lines, glass facades, and terrace designs that blend seamlessly with the surrounding greenery.Designed as a serene and elegant sanctuary, Seraph combines natural landscapes, open layouts, and advanced smart-home technology to create a modern living experience. The building’s craftsmanship reflects sophistication and attention to detail, with abundant natural light, smooth finishes, and a distinctive roadside presence.Invest with a Partner Who Puts You FirstInvesting in Dubai’s real estate shouldn’t feel uncertain—it should feel empowering. At Alba Homes, we tackle the common frustrations of investors head-on, offering a transparent, streamlined approach that brings clarity and confidence to every step. Our mission is to simplify complex decisions, eliminate hidden costs, and align every property with your financial goals.With Alba Homes, you’re not just buying property; you’re gaining a trusted partner dedicated to maximizing your returns through integrity, insight, and purpose. Discover how empowering real estate investment can be with a team that truly prioritizes your success."
+            },
+            "media": {
+                "logo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/239db457-6a33-cb9a-409a-4eabdc852430.png",
+                "primary": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/4c5b2909-5a47-7f74-3151-2d2b89ffe250.png",
+                "header": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/b730f785-6487-4b8c-c708-32749374bebe.png",
+                "priceSheet": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/e48038a0-b23c-ac63-ad17-96a38d3f5f0f.png",
+                "gallery": [
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/4c5b2909-5a47-7f74-3151-2d2b89ffe250.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/325ce7b5-29d0-f5d2-fdad-bfe4232b0d58.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/239e357f-ed23-0e82-65d7-b5590e4b2b3c.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/37046394-35c4-e5dd-df3b-b97b245a75aa.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/3969200b-59f4-f71c-8e9b-28e712216a6b.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/b7ff980a-28ea-e458-bd12-8e585d337cc0.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/e10fdd20-9598-032e-1360-4a80183a64ac.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/407e7c38-5561-f757-3ad3-adbbaed2acd4.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/e77e9780-5d35-c08a-d049-36fe929b5e42.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/fe462409-b47b-4ffd-ea38-c65233d50f22.png"
+                ],
+                "video": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/videos/2bcf5b63-6df1-4c91-b1e6-5a06abc39b3c.mp4",
+                "brochure": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/75829b68-78ea-257f-ad58-d718849cf868.pdf"
+            },
+            "amenities": [
+                {
+                    "name": "Swimming Pool",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/39d6dc0b-e136-37fa-a95a-e50b907973f7.png"
+                },
+                {
+                    "name": "Kids Swimming Pool ",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/34068d62-8b59-f4d1-2548-db1df25a3d78.png"
+                },
+                {
+                    "name": "Gym",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/0011ec8f-2baf-1c9c-f3d6-3698e8ff994e.png"
+                },
+                {
+                    "name": "Lounge",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/848acb0f-a3a3-b136-c25e-c5dec8e3ff4b.png"
+                },
+                {
+                    "name": "Sauna",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/5b2589d4-7cef-ba71-e7c1-7ee55fa040b0.png"
+                },
+                {
+                    "name": "Jacuzzi",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/ab04bcec-6e7a-6be2-3c17-73d9a9481c9d.png"
+                },
+                {
+                    "name": "Cinema",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/9dbc19bf-5bed-0260-2532-78f37707a00e.png"
+                },
+                {
+                    "name": "BBQ Area",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/ea0631ee-e445-a1cb-0152-38a86109c79d.png"
+                },
+                {
+                    "name": "Ice Bath Therapy",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/4a7aa37c-0719-2abc-c6e1-3d68395836c6.png"
+                }
+            ],
+            "tags": [
+                "Exclusive",
+                "Luxury Islands",
+                "Waterfront",
+                "Best Payment Plan",
+                "Best Selling",
+                "Villas",
+                "Luxury Living"
+            ],
+            "keywords": [
+                "WADAN",
+                "DLRC",
+                "Dubailand",
+                "Dubailand Residence Complex",
+                "Seraph by wadan",
+                "1bed",
+                "1br",
+                "1 bedroom",
+                "2 bedroom",
+                "Seraph ",
+                "wadan seraph"
+            ],
+            "seo": {
+                "title": "Seraph by WADAN | ALBA Homes Real Estate Broker L.L.C",
+                "description": "Seraph by Wadan Developments is a refined residential project in Dubailand (DLRC), offering stylish studios, 1- and 2-bedroom apartments. This 13-storey mid-rise development showcases modern architecture with sleek lines, glass facades, and terrace designs that blend seamlessly with the surrounding greenery."
+            },
+            "timestamps": {
+                "created": "2025-10-11T11:42:55.611Z",
+                "updated": "2025-10-24T06:44:53.344Z"
+            }
+        },
+        {
+            "id": "68d69e755ead09ee411ec246",
+            "slug": "nuvana-by-wadan",
+            "name": "Nuvana by WADAN",
+            "status": "published",
+            "location": {
+                "emirate": "Dubai",
+                "area": "ABU HAIL",
+                "areaSlug": "abu-hail",
+                "coordinates": {
+                    "lat": 25.299005,
+                    "lng": 55.3157765
+                }
+            },
+            "developer": {
+                "id": "68d7f356a3e8e068ed135247",
+                "name": "WADAN Developments",
+                "logo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/developer/ad4c12f3-01dd-bf65-74ff-265cbf87c521.png"
+            },
+            "pricing": {
+                "startingFrom": 1600000,
+                "currency": "AED"
+            },
+            "completion": {
+                "date": "2027-09-30",
+                "quarter": "Q3 2027"
+            },
+            "paymentPlan": {
+                "type": "full_payment_on_delivery",
+                "booking": 20,
+                "construction": {
+                    "percent": 5,
+                    "months": 18
+                },
+                "completion": 50,
+                "postHandover": null
+            },
+            "units": [
+                {
+                    "type": "Apartment",
+                    "bedrooms": "1",
+                    "startingPrice": 1600000,
+                    "sizeSqFt": 802,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/37c7db28-34cc-4028-92ef-28c17abb21e1.png"
+                },
+                {
+                    "type": "Apartment",
+                    "bedrooms": "2",
+                    "startingPrice": 2400000,
+                    "sizeSqFt": 1228,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/e9d3463d-c062-463e-9942-6f8f7717444b.png"
+                },
+                {
+                    "type": "Apartment",
+                    "bedrooms": "3",
+                    "startingPrice": 3600000,
+                    "sizeSqFt": 2062,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/58240ba5-a90e-458f-82ab-fd6ec70ba8d4.png"
+                }
+            ],
+            "description": {
+                "short": "Nuvana at Dubai Islands is a standout jewel within the scenic waterfront community, crafted by Wadan Real Estate and featuring an exclusive collection of premium residences. Its low-rise design...",
+                "full": "Nuvana at Dubai Islands is a standout jewel within the scenic waterfront community, crafted by Wadan Real Estate and featuring an exclusive collection of premium residences. Its low-rise design embodies the essence of coastal living, blending refined architecture with a lifestyle of luxury. Gracefully positioned along the serene shores of Dubai Islands, Nuvana harmonizes architectural elegance with modern waterfront living. The contemporary façade, highlighted by soft curves, white-and-gold tones, and sweeping glass features, enhances the natural beach backdrop while maximizing natural light throughout the interiors.Invest with a Partner Who Puts You FirstInvesting in Dubai’s real estate shouldn’t feel uncertain—it should feel empowering. At Alba Homes, we tackle the common frustrations of investors head-on, offering a transparent, streamlined approach that brings clarity and confidence to every step. Our mission is to simplify complex decisions, eliminate hidden costs, and align every property with your financial goals.With Alba Homes, you’re not just buying property; you’re gaining a trusted partner dedicated to maximizing your returns through integrity, insight, and purpose. Discover how empowering real estate investment can be with a team that truly prioritizes your success."
+            },
+            "media": {
+                "logo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/b7835882-0180-4d63-2e7c-2828a5ebf880.png",
+                "primary": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/6c4f4043-7b77-121c-1544-2c651310beee.png",
+                "header": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/906f0362-3303-1b6a-209b-20226b876f67.png",
+                "priceSheet": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/5a23ab38-fa8d-8d61-bdf9-80460f231ca1.png",
+                "gallery": [
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/0f6bb45d-6fc6-e60c-558c-6e1a62e2396c.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/63c650c5-b4a7-45c5-4be3-6cc730d53649.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/37dd2f51-03cd-de9f-ae4f-0ba8b18df71b.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/e3f88dda-6b1c-95e9-d2c1-e4ca385060b1.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/18f70648-764a-27e3-d3bf-7f47599b719f.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/88f1d495-1ade-3527-2a6c-f1905741a639.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/878e2620-3c4f-cf2a-75bb-353242df0dbf.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/9aab0bc7-b4ae-2978-df51-eee1a3d5bf85.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/b677583c-b5ca-4076-8d2c-e0b8e14031d6.png"
+                ],
+                "video": null,
+                "brochure": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/bc50d922-dd8d-e1c5-c6ca-dcb4776a73ba.pdf"
+            },
+            "amenities": [
+                {
+                    "name": "Swimming Pool",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/dd1b1007-b3d6-ddf5-8e47-6e45e908185f.png"
+                },
+                {
+                    "name": "Cinema & Billiards",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/a5b1d3a1-4109-716d-c2f0-50e997adc706.png"
+                },
+                {
+                    "name": "Lounge",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/8359c463-5b74-d8b5-3e6a-343dc9ebeba1.png"
+                },
+                {
+                    "name": "BBQ Area",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/ac0d9774-185d-42f3-9922-f7aba2b5ab92.png"
+                },
+                {
+                    "name": "Gym",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/f57e1f57-8469-f281-ae82-fa7ceac1c399.png"
+                },
+                {
+                    "name": "Sauna",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/0e827b6c-8cdc-d3dd-f2bf-eeff5e48532c.png"
+                },
+                {
+                    "name": "Yoga",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/0bdbd6a7-6d3a-c694-5f73-db60eb790521.png"
+                },
+                {
+                    "name": "Kids Play Area",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/70199307-6043-c9cd-3da8-246ac84195ae.png"
+                },
+                {
+                    "name": "Ice Bath Therapy",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/ee73127a-8bfd-142d-a9ed-6a3268ff619d.png"
+                },
+                {
+                    "name": "Cinema",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/8ae53f55-3619-4902-7fdf-6ce7d2ec1fe2.png"
+                }
+            ],
+            "tags": [
+                "Luxury Islands",
+                "Exclusive"
+            ],
+            "keywords": [
+                "Dubai Islands",
+                "Waterfront",
+                "Wadan",
+                "WADAN",
+                "NUVANA BY WADAN",
+                "WADAN NUVANA",
+                "1 bedroom",
+                "dubai apartments",
+                "dubai islands a",
+                "2 bedrooms",
+                "3 bedrooms"
+            ],
+            "seo": {
+                "title": "NUVANA by WADAN | ALBA HOMES REAL ESTATE BROKER L.L.C",
+                "description": "Beyond property and space, Wadan Developments brings together craftsmanship, innovation and purpose to create environments that resonate deeply. We don’t just imagine what’s next, we build it, turning the extraordinary into everyday experience."
+            },
+            "timestamps": {
+                "created": "2025-09-26T14:08:53.053Z",
+                "updated": "2025-10-22T13:28:17.297Z"
+            }
+        },
+        {
+            "id": "68c82464b5432cc2abec88ec",
+            "slug": "binghatti-pinnacle",
+            "name": "Binghatti Pinnacle",
+            "status": "published",
+            "location": {
+                "emirate": "Dubai",
+                "area": "BUR DUBAI",
+                "areaSlug": "bur-dubai",
+                "coordinates": {
+                    "lat": 25.2121178,
+                    "lng": 55.3144749
+                }
+            },
+            "developer": {
+                "id": "64367981f7cee4c59e5090d1",
+                "name": "Binghatti",
+                "logo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/developer/112917c0-87b2-259a-d586-d3a82b10ee40.png"
+            },
+            "pricing": {
+                "startingFrom": 1450000,
+                "currency": "AED"
+            },
+            "completion": {
+                "date": "2025-12-31",
+                "quarter": "Q4 2025"
+            },
+            "paymentPlan": {
+                "type": "full_payment_on_delivery",
+                "booking": 20,
+                "construction": {
+                    "percent": 25,
+                    "months": 3
+                },
+                "completion": 30,
+                "postHandover": null
+            },
+            "units": [
+                {
+                    "type": "Apartment",
+                    "bedrooms": "1",
+                    "startingPrice": 1450000,
+                    "sizeSqFt": 714,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/f9a9eb4d-2511-4e2d-88a9-4622284205bf.png"
+                },
+                {
+                    "type": "Apartment",
+                    "bedrooms": "2",
+                    "startingPrice": 2325000,
+                    "sizeSqFt": 1067,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/1f3c3042-b939-4fc1-87ce-a93c418ffe16.png"
+                },
+                {
+                    "type": "Apartment",
+                    "bedrooms": "3",
+                    "startingPrice": 3300000,
+                    "sizeSqFt": 1523,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/dd2e8024-8e65-45b6-bde5-88bf1e25d457.png"
+                }
+            ],
+            "description": {
+                "short": "Binghatti Pinnacle at Al Jaddaf is a landmark residential development by Binghatti Developers, featuring elegantly designed apartments with stunning views. Rising 20 storeys high, the tower showcases...",
+                "full": "Binghatti Pinnacle at Al Jaddaf is a landmark residential development by Binghatti Developers, featuring elegantly designed apartments with stunning views. Rising 20 storeys high, the tower showcases a modern architectural concept complemented by two basement levels, a ground floor, and three podium levels dedicated to leisure and lifestyle amenities. Each residence is thoughtfully designed with premium finishes, contemporary layouts, and panoramic views of iconic landmarks such as Dubai Creek and Dubai Frame. The striking façade, crafted with crystalline glass and other contemporary materials, enhances its visual appeal while blending seamlessly with the city skyline.Invest with a Partner Who Puts You FirstInvesting in Dubai’s real estate shouldn’t feel uncertain—it should feel empowering. At Alba Homes, we tackle the common frustrations of investors head-on, offering a transparent, streamlined approach that brings clarity and confidence to every step. Our mission is to simplify complex decisions, eliminate hidden costs, and align every property with your financial goals.With Alba Homes, you’re not just buying property; you’re gaining a trusted partner dedicated to maximizing your returns through integrity, insight, and purpose. Discover how empowering real estate investment can be with a team that truly prioritizes your success."
+            },
+            "media": {
+                "logo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/cbbfba6e-3702-d30b-f9cc-358e028448ea.png",
+                "primary": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/e1a46684-f556-5fa1-0a82-574efc55a3d1.png",
+                "header": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/9a34999a-dde9-b132-6882-82a9b56b4890.png",
+                "priceSheet": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/cee7099b-5d9d-8145-6395-e5321c508b8b.png",
+                "gallery": [
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/781ddea8-106f-8064-d694-ffd3578eacd8.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/7b820924-ff28-094a-5d02-4146c37687b2.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/540322c1-5060-8905-6ecd-f3a62862f2dc.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/cc46cc48-d61b-f5f6-4cd1-346a7ec5c938.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/4d9373ec-51e3-05c7-ebd1-ee7b6a8dd189.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/29176ccc-8b41-7529-62e8-22c742f4c01d.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/a876135b-af04-9a41-7ae2-c2a586883f56.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/8b6b160d-7a7a-25c2-64ec-9845e6834a2f.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/08b361cd-983c-2a37-0705-48db75d67882.png"
+                ],
+                "video": null,
+                "brochure": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/ac5c13ac-e41a-2891-11d0-d2907a69c245.pdf"
+            },
+            "amenities": [
+                {
+                    "name": "Swimming Pool",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/552e22f6-8553-bb30-592b-4b872ef2c18a.png"
+                },
+                {
+                    "name": "Pool Deck area",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/ac26675e-9044-137e-efb8-c726364e3818.png"
+                },
+                {
+                    "name": "Indoor Gym",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/ac09eeea-bdad-6f6d-c7de-f4123faddd13.png"
+                },
+                {
+                    "name": "Terrace Sitting Area",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/a8d07164-43da-f053-20ad-374dc95686c1.png"
+                },
+                {
+                    "name": "Landscaped gardens and parks",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/e7b78aad-bf73-4fe8-5b02-d3aceb1cc5a9.png"
+                },
+                {
+                    "name": "Outdoor seating areas",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/8b3ba106-cb2c-321c-6732-96fedc79d5bd.png"
+                }
+            ],
+            "tags": [
+                "Exclusive"
+            ],
+            "keywords": [
+                "Binghatti",
+                "Binghatti Pinnacle",
+                "Al Jaddaf",
+                "Pinnacle by Binghatti",
+                "Pinnacle",
+                "Dubai",
+                "Apartments",
+                "Alba",
+                "Alba Homes",
+                "Alba Homes Real Estate Broker L.L.C"
+            ],
+            "seo": {
+                "title": "Binghatti Pinnacle | Alba Homes Real Estate Broker L.L.C",
+                "description": "Binghatti"
+            },
+            "timestamps": {
+                "created": "2025-09-15T14:36:20.871Z",
+                "updated": "2025-10-22T13:28:46.315Z"
+            }
+        },
+        {
+            "id": "68c1866cb5432cc2abe635fe",
+            "slug": "binghatti-skyblade",
+            "name": "Binghatti Skyblade",
+            "status": "published",
+            "location": {
+                "emirate": "Dubai",
+                "area": "DOWNTOWN",
+                "areaSlug": "downtown-dubai",
+                "coordinates": {
+                    "lat": 25.1895452,
+                    "lng": 55.2724951
+                }
+            },
+            "developer": {
+                "id": "64367981f7cee4c59e5090d1",
+                "name": "Binghatti",
+                "logo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/developer/112917c0-87b2-259a-d586-d3a82b10ee40.png"
+            },
+            "pricing": {
+                "startingFrom": 1674999,
+                "currency": "AED"
+            },
+            "completion": {
+                "date": "2027-12-31",
+                "quarter": "Q4 2027"
+            },
+            "paymentPlan": {
+                "type": "full_payment_on_delivery",
+                "booking": 10,
+                "construction": {
+                    "percent": 3,
+                    "months": 24
+                },
+                "completion": 30,
+                "postHandover": null
+            },
+            "units": [
+                {
+                    "type": "Apartment",
+                    "bedrooms": "Studio",
+                    "startingPrice": 1674999,
+                    "sizeSqFt": 378,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/af995d08-0c5d-4273-b856-ef92531e8a64.png"
+                },
+                {
+                    "type": "Apartment",
+                    "bedrooms": "1",
+                    "startingPrice": 3649999,
+                    "sizeSqFt": 965,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/a81a6fb0-1aaf-493e-954f-9c42cb005e21.png"
+                },
+                {
+                    "type": "Apartment",
+                    "bedrooms": "2",
+                    "startingPrice": 4699999,
+                    "sizeSqFt": 1261,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/4051dd05-3499-41c3-9e64-6cda929be167.png"
+                }
+            ],
+            "description": {
+                "short": "Binghatti Skyblade, located in Downtown Dubai, presents a collection of exquisite residences by Binghatti Developers. Each home is designed to celebrate the beauty of nature and the essence of...",
+                "full": "Binghatti Skyblade, located in Downtown Dubai, presents a collection of exquisite residences by Binghatti Developers. Each home is designed to celebrate the beauty of nature and the essence of sustainable luxury. This peaceful sanctuary offers a lifestyle like no other, where biophilic design seamlessly integrates with the natural environment, blending eco-friendly living with modern elegance. Every detail inside reflects nature’s sophistication, with carefully selected materials crafted to perfection. From sleek flooring to elegant countertops, every surface invites touch, creating an atmosphere of tranquility and harmony that soothes the senses.Invest with a Partner Who Puts You FirstInvesting in Dubai’s real estate shouldn’t feel uncertain—it should feel empowering. At Alba Homes, we tackle the common frustrations of investors head-on, offering a transparent, streamlined approach that brings clarity and confidence to every step. Our mission is to simplify complex decisions, eliminate hidden costs, and align every property with your financial goals.With Alba Homes, you’re not just buying property; you’re gaining a trusted partner dedicated to maximizing your returns through integrity, insight, and purpose. Discover how empowering real estate investment can be with a team that truly prioritizes your success."
+            },
+            "media": {
+                "logo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/8f252571-45ff-da90-9c54-090ac6b6a70e.png",
+                "primary": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/575f83cf-6e4c-29a8-4ec5-270e3eb30399.png",
+                "header": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/bd5827d5-8a40-b1ee-5494-59515b8a6201.png",
+                "priceSheet": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/5838f6bb-6438-719a-50da-1fc6f11b4eb2.png",
+                "gallery": [
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/a8631526-0810-a889-02d6-0a415e657469.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/a01a9217-b62e-4e90-07cd-0c754e5298ee.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/9d194e47-a535-e999-bb28-3288581e3a3c.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/9876b12f-672d-ed81-92ed-4e79585a54ac.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/1aece77e-ed4d-417b-122f-fc5f5d7ec408.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/0f373199-9530-26cd-5572-877c110d7b62.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/d3a56477-a08b-acea-4cc5-1ef352699040.png"
+                ],
+                "video": null,
+                "brochure": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/a356f90c-6a06-dd9a-c5cf-bbb8a40da65e.pdf"
+            },
+            "amenities": [
+                {
+                    "name": "Rooftop Inifinity pool",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/91284645-d0af-d3cf-e13e-4ab59ecf2d8c.png"
+                },
+                {
+                    "name": "Luxury Spa",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/600688d4-850f-c0a5-de6c-4d5675e47ccb.png"
+                },
+                {
+                    "name": "Luxury Lobby",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/699aa3e8-36f6-ea5a-f329-32c8f94527e2.png"
+                },
+                {
+                    "name": "Landscape Recreational Area",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/6bd26d0a-9368-1def-7885-384d1d1e15f6.png"
+                },
+                {
+                    "name": "Running Track",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/f64879b1-8856-3e76-cfec-cbdb09b5d55d.png"
+                },
+                {
+                    "name": "Skyline Gym",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/d7d9a0e7-fc68-60f0-bdd6-a019c1718c8e.png"
+                },
+                {
+                    "name": "Private Pools",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/a541e0fb-8605-1a3e-fa46-af770fa94192.png"
+                },
+                {
+                    "name": "Kids Play Area",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/6d2a6710-92bd-a10c-6632-b66ffb019efe.png"
+                }
+            ],
+            "tags": [
+                "Luxury Living",
+                "Exclusive"
+            ],
+            "keywords": [
+                "Binghatti Skyblade",
+                "Business Bay",
+                "Skyblade",
+                "Binghatti",
+                "Apartments",
+                "Burj Khalifa",
+                "Downtown"
+            ],
+            "seo": {
+                "title": "Binghatti Skyblade | Alba Homes Real Estate Broker L.L.C",
+                "description": "Binghatti Skyblade | Alba Homes Real Estate Broker L.L.C"
+            },
+            "timestamps": {
+                "created": "2025-09-10T14:08:44.398Z",
+                "updated": "2025-10-22T13:28:55.832Z"
+            }
+        },
+        {
+            "id": "68b2b630bb50fc0dc5c27805",
+            "slug": "pearlshire-by-bond-enclave",
+            "name": "Pearlshire by Bond Enclave",
+            "status": "published",
+            "location": {
+                "emirate": "Dubai",
+                "area": "ARJAN",
+                "areaSlug": "arjan",
+                "coordinates": {
+                    "lat": 25.0639945,
+                    "lng": 55.2418989
+                }
+            },
+            "developer": {
+                "id": "68b2d682bb50fc0dc5c2a7f7",
+                "name": "Pearlshire Development",
+                "logo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/developer/e456dc2e-21d7-330b-3eff-8aeb4ff7f9fd.png"
+            },
+            "pricing": {
+                "startingFrom": 1150000,
+                "currency": "AED"
+            },
+            "completion": {
+                "date": "2027-06-30",
+                "quarter": "Q2 2027"
+            },
+            "paymentPlan": {
+                "type": "full_payment_on_delivery",
+                "booking": 10,
+                "construction": {
+                    "percent": 5,
+                    "months": 12
+                },
+                "completion": 14,
+                "postHandover": {
+                    "percent": 1,
+                    "months": 36
+                }
+            },
+            "units": [
+                {
+                    "type": "Apartment",
+                    "bedrooms": "1",
+                    "startingPrice": 1150000,
+                    "sizeSqFt": 700.08,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/43a6bfcc-e6d0-49df-bc08-481da1d72517.png"
+                },
+                {
+                    "type": "Apartment",
+                    "bedrooms": "2",
+                    "startingPrice": 1642000,
+                    "sizeSqFt": 1088.66,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/d7368f3e-d10b-4bbb-8ba6-655addf62352.png"
+                },
+                {
+                    "type": "Apartment",
+                    "bedrooms": "3",
+                    "startingPrice": 3065000,
+                    "sizeSqFt": 2630.27,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/2717c054-c15d-4d0d-a849-87ae0e7f6325.png"
+                }
+            ],
+            "description": {
+                "short": "Bond Enclave at Arjan by Pearlshire Developments is a contemporary residential project featuring premium 1, 2, and 3-bedroom apartments. Designed as a sanctuary of modern living, it combines luxury,...",
+                "full": "Bond Enclave at Arjan by Pearlshire Developments is a contemporary residential project featuring premium 1, 2, and 3-bedroom apartments. Designed as a sanctuary of modern living, it combines luxury, comfort, and community within one of Dubai’s most dynamic neighborhoods.Located in Arjan, residents enjoy seamless access to city life and nearby attractions such as Dubai Miracle Garden, Mall of the Emirates, and Global Village. With direct connectivity to Sheikh Mohammed bin Zayed Road and Umm Suqeim Road, the development offers both convenience and tranquillity, making it an ideal address for those seeking a refined lifestyle.Invest with a Partner Who Puts You FirstInvesting in Dubai’s real estate shouldn’t feel uncertain—it should feel empowering. At Alba Homes, we tackle the common frustrations of investors head-on, offering a transparent, streamlined approach that brings clarity and confidence to every step. Our mission is to simplify complex decisions, eliminate hidden costs, and align every property with your financial goals.With Alba Homes, you’re not just buying property; you’re gaining a trusted partner dedicated to maximizing your returns through integrity, insight, and purpose. Discover how empowering real estate investment can be with a team that truly prioritizes your success."
+            },
+            "media": {
+                "logo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/ee0cb8cb-dc46-d909-d195-075c7bf50ef8.png",
+                "primary": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/32ac62a4-6ee1-0feb-adfa-938948e4a2df.png",
+                "header": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/b91dc6f4-fac7-469f-68a3-7cdef32ab8ba.png",
+                "priceSheet": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/2797cd19-b03a-4516-f6c0-323c7b39f9e5.png",
+                "gallery": [
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/7ec5d0e4-575a-43c2-c3df-2e98fd0de138.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/5968fc42-d78e-1ec1-f332-38d484f214e9.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/9cdaeaa6-4f0b-5938-fb02-b36cf22e1100.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/9858cca5-75ec-3c5e-6aca-069dc5463729.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/e23fd150-e335-3527-5397-8fe52b4b3db6.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/7a4dbb0a-f7e6-ffe8-1d06-5d8c8bc0535d.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/aa1736da-3606-2d34-8698-4f0c40d4784f.png"
+                ],
+                "video": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/videos/8d0f920f-e6ab-31c5-75f8-9b01570efaaa.mp4",
+                "brochure": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/47004aac-a097-ec74-6356-b81a3381ec66.pdf"
+            },
+            "amenities": [
+                {
+                    "name": "Infinity Pool",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/8ee59714-e8c0-0bd0-6d93-adf805d08e69.png"
+                },
+                {
+                    "name": "Gymnasium & Jogging Track",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/520a917c-f34a-b5c2-d749-8e3a56efaf53.png"
+                },
+                {
+                    "name": "Indoor Clubhouse",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/180ddd4e-eb1f-fb6c-0fd8-ca0dce36accc.png"
+                },
+                {
+                    "name": "Sauna & Outdoor Yoga Zone",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/e83a196a-01d0-3552-1d6d-ab63cb93e60e.png"
+                },
+                {
+                    "name": "Social Lounge",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/16890147-e55b-cc72-d72b-9131a4e45bd0.png"
+                },
+                {
+                    "name": "Rooftop Sports Court",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/20a1e4a3-cc43-44cf-262b-e285155ffd97.png"
+                },
+                {
+                    "name": "Indoor & Outdoor Kids Play Area",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/431cd790-954b-bedd-6abf-40aa5a4b41db.png"
+                },
+                {
+                    "name": "BBQ area",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/4df02cda-f724-c084-3ee1-d27bf61cdffb.png"
+                },
+                {
+                    "name": "Outdoor cinema",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/8867f275-ef37-0373-a153-9a5a0b131fb2.png"
+                },
+                {
+                    "name": "Lazy River",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/685dfe79-7593-bb6c-f747-5495909b1a6c.png"
+                }
+            ],
+            "tags": [
+                "Best Payment Plan"
+            ],
+            "keywords": [
+                "Pearlshire",
+                "Pearlshire Developments",
+                "Arjan",
+                "Apartments",
+                "post handover",
+                "post-handover",
+                "Alba Homes",
+                "Alba Homes Real Estate Broker L.L.C",
+                "Alba Homes Real Estate Broker LLC",
+                "Alba",
+                "Bond Enclave",
+                "Bond",
+                "Bond Enclave by Pearlshire",
+                "Pearlshire Bond Enclave"
+            ],
+            "seo": {
+                "title": "Bond Enclave by Pearlshire | Alba Homes Real Estate Broker L.L.C",
+                "description": "Bond Enclave at Arjan by Pearlshire Developments is a contemporary residential project featuring premium 1, 2, and 3-bedroom apartments. Designed as a sanctuary of modern living, it combines luxury, comfort, and community within one of Dubai’s most dynamic neighborhoods."
+            },
+            "timestamps": {
+                "created": "2025-08-30T08:28:32.290Z",
+                "updated": "2025-08-30T11:08:43.923Z"
+            }
+        },
+        {
+            "id": "68b1a55ebb50fc0dc5c1146e",
+            "slug": "stamn-one-by-stamn",
+            "name": "STAMN ONE by STAMN",
+            "status": "published",
+            "location": {
+                "emirate": "Dubai",
+                "area": "AL SATWA",
+                "areaSlug": "al-satwa",
+                "coordinates": {
+                    "lat": 25.2231386,
+                    "lng": 55.27535229999999
+                }
+            },
+            "developer": {
+                "id": "68b1bddabb50fc0dc5c17442",
+                "name": "STAMN",
+                "logo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/developer/4b1bff6e-94f5-e304-1c37-07df62d23bea.png"
+            },
+            "pricing": {
+                "startingFrom": 1078000,
+                "currency": "AED"
+            },
+            "completion": {
+                "date": "2026-09-30",
+                "quarter": "Q3 2026"
+            },
+            "paymentPlan": {
+                "type": "post_handover",
+                "booking": 20,
+                "construction": {
+                    "percent": 10,
+                    "months": 8
+                },
+                "completion": 30,
+                "postHandover": {
+                    "percent": 5,
+                    "months": 12
+                }
+            },
+            "units": [
+                {
+                    "type": "Apartment",
+                    "bedrooms": "Studio",
+                    "startingPrice": 1078000,
+                    "sizeSqFt": 486.1,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/6ef682fc-2f0d-4c18-8925-98709c7524f1.png"
+                },
+                {
+                    "type": "Apartment",
+                    "bedrooms": "1",
+                    "startingPrice": 1790000,
+                    "sizeSqFt": 913.32,
+                    "image": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/beds/9b3b6502-9eb1-4822-8380-dc1e21e5085f.png"
+                }
+            ],
+            "description": {
+                "short": "Stamn One Residences at Jumeirah Garden City is a six-storey residential development by Stamn Development LLC, offering studios, 1- and 2-bedroom apartments. The project blends modern design with...",
+                "full": "Stamn One Residences at Jumeirah Garden City is a six-storey residential development by Stamn Development LLC, offering studios, 1- and 2-bedroom apartments. The project blends modern design with Arab cultural influences, creating not just a home, but an architectural statement of elegance and innovation. Located in Al Satwa’s Jumeirah Garden City, the development provides excellent connectivity via Sheikh Zayed Road and is minutes away from key landmarks such as Dubai Mall, Jumeirah Beach, and the Museum of the Future. The community itself is vibrant, with a mix of commercial and leisure facilities.Residents enjoy premium features including smart home technology, a grand lobby, and a landscaped rooftop retreat. Amenities such as a swimming pool, bubble pool, sun deck, and panoramic city views transform everyday living into a refined lifestyle experience.Invest with a Partner Who Puts You FirstInvesting in Dubai’s real estate shouldn’t feel uncertain—it should feel empowering. At Alba Homes, we tackle the common frustrations of investors head-on, offering a transparent, streamlined approach that brings clarity and confidence to every step. Our mission is to simplify complex decisions, eliminate hidden costs, and align every property with your financial goals.With Alba Homes, you’re not just buying property; you’re gaining a trusted partner dedicated to maximizing your returns through integrity, insight, and purpose. Discover how empowering real estate investment can be with a team that truly prioritizes your success."
+            },
+            "media": {
+                "logo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/03113b1a-258b-a4b7-0fcc-0fe7a234c641.png",
+                "primary": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/0d93448a-17c9-8441-dc7b-ac9694f68eb8.png",
+                "header": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/e088df81-057f-7e87-5359-fd61f59e180d.png",
+                "priceSheet": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/b92b0b6a-97d7-6664-6b79-fa584eeea950.png",
+                "gallery": [
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/c4311f5f-e204-ff2c-08ed-da197c7cf92c.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/d59e6c27-b94c-0e8f-b019-604beb94e035.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/85d37bb5-65ca-285b-4fc8-b2b24caf6b67.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/4dda6aae-69b2-9d7b-f7e1-d010aa8bb4d2.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/2d988543-d671-23a1-5682-49e5363ae5d1.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/2a5d97ac-b34e-0816-e181-4bc3f152125b.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/940893b7-ccad-29cf-afc6-9d8a8d61eda8.png",
+                    "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/photos/72fd7943-e0ba-1d4d-8eb9-f65cf849d82d.png"
+                ],
+                "video": null,
+                "brochure": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/otherImages/4e368602-32c9-a3ff-a7d0-5cde5f4856b2.pdf"
+            },
+            "amenities": [
+                {
+                    "name": "Fitness Centre",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/076d3e31-553a-bf31-be78-da443eb0b40d.png"
+                },
+                {
+                    "name": "Swimming Pool",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/f6b9614a-c0b9-2400-390e-271c5650a329.png"
+                },
+                {
+                    "name": "Kid's Play Area",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/50a5c793-a94c-78b4-7f28-997fe086b45c.png"
+                },
+                {
+                    "name": "Yoga Space",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/d632eeba-2481-4433-22c8-541cff2ae1f0.png"
+                },
+                {
+                    "name": "Aquatic Sports",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/f095ecf0-ce95-13d9-5eab-ebcbbdbe5608.png"
+                },
+                {
+                    "name": "Roof Landscape",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/c772c1b3-ba5e-0d93-bd89-74fb345f1459.png"
+                },
+                {
+                    "name": "Singingbowl Healing",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/73c3d6f1-9f23-26cf-1cfc-2f3313e14e68.png"
+                },
+                {
+                    "name": "Parent-child Space",
+                    "photo": "https://albacorp-homes-prod.s3.me-central-1.amazonaws.com/offPlans/amenities/eabbb639-cf70-db5f-1aa8-eac490d18699.png"
+                }
+            ],
+            "tags": [],
+            "keywords": [
+                "Alba Homesa",
+                "Alba Homes Real Estate Broker L.L.C",
+                "Alba Homes Real Estate Broker LLC",
+                "Alba",
+                "STAMN ONE",
+                "STAMN",
+                "Apartment",
+                "Jumeirah Garden City",
+                "Jumeirah ",
+                "JGC"
+            ],
+            "seo": {
+                "title": "STAMN One | Alba Homes Real Estate Broker L.L.C",
+                "description": "STAMN Real Estate Development is among the fastest-growing developers in the Middle East and Asia, renowned for creating high-value communities. From exclusive boutique residences to large-scale mixed-use developments, STAMN is dedicated to transforming spaces into thriving destinations that enrich lifestyles and deliver long-term value."
+            },
+            "timestamps": {
+                "created": "2025-08-29T13:04:30.081Z",
+                "updated": "2025-08-29T15:24:14.953Z"
+            }
+        }
+    ]
+}

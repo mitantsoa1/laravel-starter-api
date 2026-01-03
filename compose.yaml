@@ -1,0 +1,49 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: emiragate_app
+        restart: unless-stopped
+        working_dir: /var/www/html
+        volumes:
+            - ./:/var/www/html
+        ports:
+            - "8000:8000"
+        depends_on:
+            - db
+        networks:
+            - emiragate
+
+    db:
+        image: postgres:15-alpine
+        container_name: emiragate_db
+        restart: unless-stopped
+        environment:
+            POSTGRES_DB: ${DB_DATABASE:-emiragate}
+            POSTGRES_USER: ${DB_USERNAME:-emiragate}
+            POSTGRES_PASSWORD: ${DB_PASSWORD:-emiragate}
+        volumes:
+            - ./docker-data/db:/var/lib/postgresql/data
+        ports:
+            - "5433:5432"
+        networks:
+            - emiragate
+
+    pgadmin:
+        image: dpage/pgadmin4
+        container_name: emiragate_pgadmin
+        restart: unless-stopped
+        environment:
+            PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-admin@example.com}
+            PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+        ports:
+            - "5050:80"
+        depends_on:
+            - db
+        networks:
+            - emiragate
+
+networks:
+    emiragate:
+        driver: bridge
