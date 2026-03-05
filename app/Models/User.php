@@ -57,4 +57,25 @@ class User extends Authenticatable implements JWTSubject
     {
         return [];
     }
+
+    /**
+     * Règles de validation pour GenericRequest.
+     */
+    public static function validationRules(string $method, $id = null): array
+    {
+        if ($method === 'POST') {
+            return [
+                'name' => 'required|string|max:255',
+                'email' => 'required|string|email|max:255|unique:users',
+                'password' => 'required|string|min:8',
+            ];
+        }
+
+        // Pour PUT/PATCH
+        return [
+            'name' => 'sometimes|required|string|max:255',
+            'email' => "sometimes|required|string|email|max:255|unique:users,email,{$id}",
+            'password' => 'sometimes|required|string|min:8',
+        ];
+    }
 }

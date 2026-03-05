@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Services\UserService;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
+use App\Http\Requests\GenericRequest;
 
 class UserController extends Controller
 {
@@ -35,14 +36,10 @@ class UserController extends Controller
     /**
      * Créer un nouvel utilisateur.
      */
-    public function store(Request $request): JsonResponse
+    public function store(GenericRequest $request): JsonResponse
     {
-        // Validation basique (un FormRequest serait idéal)
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8',
-        ]);
+        // La validation est gérée automatiquement par GenericRequest
+        $validatedData = $request->validated();
 
         // Hasher le mot de passe avant la création
         $validatedData['password'] = bcrypt($validatedData['password']);
@@ -67,13 +64,9 @@ class UserController extends Controller
     /**
      * Mettre à jour un utilisateur.
      */
-    public function update(Request $request, $id): JsonResponse
+    public function update(GenericRequest $request, $id): JsonResponse
     {
-        $validatedData = $request->validate([
-            'name' => 'sometimes|required|string|max:255',
-            'email' => 'sometimes|required|string|email|max:255|unique:users,email,' . $id,
-            'password' => 'sometimes|required|string|min:8',
-        ]);
+        $validatedData = $request->validated();
 
         // Si on met à jour le mot de passe, penser à le hasher
         if (isset($validatedData['password'])) {
