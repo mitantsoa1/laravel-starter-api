@@ -25,5 +25,16 @@ class AppServiceProvider extends ServiceProvider
         RateLimiter::for('api', function (Request $request) {
             return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
         });
+
+        // Use GenericPolicy as a fallback for models without a specific policy
+        \Illuminate\Support\Facades\Gate::guessPolicyNamesUsing(function (string $modelClass) {
+            $policyName = 'App\\Policies\\' . class_basename($modelClass) . 'Policy';
+
+            if (class_exists($policyName)) {
+                return $policyName;
+            }
+
+            return \App\Policies\GenericPolicy::class;
+        });
     }
 }
