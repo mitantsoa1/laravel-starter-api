@@ -26,6 +26,11 @@ Route::post('/forgot-password', [PasswordResetController::class, 'forgotPassword
 Route::post('/reset-password', [PasswordResetController::class, 'resetPassword']);
 Route::get('/alba-homes', [HomeController::class, 'albaHomes']); // Added Alba Homes route
 
+Route::get('/auth/google/url', [\App\Http\Controllers\Api\Auth\SocialAuthController::class, 'redirectToGoogle']);
+Route::get('/auth/google/callback', [\App\Http\Controllers\Api\Auth\SocialAuthController::class, 'handleGoogleCallback']);
+Route::post('/auth/social/exchange', [\App\Http\Controllers\Api\Auth\SocialAuthController::class, 'exchangeCodeForToken']);
+
+
 // Protected routes
 Route::middleware('auth:api')->group(function () {
     Route::get('/user', function (Request $request) {
