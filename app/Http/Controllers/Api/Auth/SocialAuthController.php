@@ -42,7 +42,7 @@ class SocialAuthController extends Controller
     }
 
     /**
-     * @OA\Post(
+     * @OA\Get(
      *     path="/api/auth/google/callback",
      *     summary="Handle Google Auth Callback",
      *     description="Exchanges the authorization code for a JWT token.",
@@ -129,7 +129,30 @@ class SocialAuthController extends Controller
     }
 
     /**
-     * Exchange the temporary code for the JWT token.
+     * @OA\Post(
+     *     path="/api/auth/social/exchange",
+     *     summary="Exchange temporary code for JWT token",
+     *     tags={"Auth"},
+     *     @OA\RequestBody(
+     *         required=true,
+     *         @OA\JsonContent(
+     *             required={"code"},
+     *             @OA\Property(property="code", type="string", description="Temporary code returned from callback")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="Token exchanged successfully",
+     *         @OA\JsonContent(
+     *             @OA\Property(property="token", type="string"),
+     *             @OA\Property(property="token_type", type="string", example="bearer")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=400,
+     *         description="Missing or invalid code"
+     *     )
+     * )
      */
     public function exchangeCodeForToken(Request $request)
     {

@@ -12,7 +12,253 @@
         },
         "version": "1.0.0"
     },
+    "servers": [
+        {
+            "url": "http://localhost:8000",
+            "description": "API Server"
+        }
+    ],
     "paths": {
+        "/api/register": {
+            "post": {
+                "tags": [
+                    "Authentication"
+                ],
+                "summary": "Register a new user",
+                "operationId": "58fe5a217ef88ae75e9b530a5e5817d1",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name",
+                                    "email",
+                                    "password",
+                                    "password_confirmation"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "John Doe"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "format": "email",
+                                        "example": "john@example.com"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "format": "password",
+                                        "minLength": 8,
+                                        "example": "Secret@123"
+                                    },
+                                    "password_confirmation": {
+                                        "type": "string",
+                                        "format": "password",
+                                        "example": "Secret@123"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "User registered successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "access_token": {
+                                            "type": "string"
+                                        },
+                                        "user": {
+                                            "$ref": "#/components/schemas/User"
+                                        },
+                                        "token_type": {
+                                            "type": "string",
+                                            "example": "bearer"
+                                        },
+                                        "expires_in": {
+                                            "type": "integer",
+                                            "example": 3600
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    }
+                }
+            }
+        },
+        "/api/login": {
+            "post": {
+                "tags": [
+                    "Authentication"
+                ],
+                "summary": "Login user and return JWT token",
+                "operationId": "ea134134deae11eb974c719450ef8a02",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "email",
+                                    "password"
+                                ],
+                                "properties": {
+                                    "email": {
+                                        "type": "string",
+                                        "format": "email",
+                                        "example": "john@example.com"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "format": "password",
+                                        "example": "secret"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful login",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "access_token": {
+                                            "type": "string"
+                                        },
+                                        "user": {
+                                            "$ref": "#/components/schemas/User"
+                                        },
+                                        "token_type": {
+                                            "type": "string",
+                                            "example": "bearer"
+                                        },
+                                        "expires_in": {
+                                            "type": "integer",
+                                            "example": 3600
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                }
+            }
+        },
+        "/api/profile": {
+            "post": {
+                "tags": [
+                    "Authentication"
+                ],
+                "summary": "Get user profile",
+                "operationId": "7fe8be2890e450abe896a01391cc9b2b",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/User"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/logout": {
+            "post": {
+                "tags": [
+                    "Authentication"
+                ],
+                "summary": "Logout user (invalidate token)",
+                "operationId": "5ebea01ab5f21df71d38f3505718a1d7",
+                "responses": {
+                    "200": {
+                        "description": "Successfully logged out"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/refresh": {
+            "post": {
+                "tags": [
+                    "Authentication"
+                ],
+                "summary": "Refresh JWT token",
+                "operationId": "be1bcad263a8745277dd14f08d804e94",
+                "responses": {
+                    "200": {
+                        "description": "Token refreshed",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "access_token": {
+                                            "type": "string"
+                                        },
+                                        "user": {
+                                            "$ref": "#/components/schemas/User"
+                                        },
+                                        "token_type": {
+                                            "type": "string",
+                                            "example": "bearer"
+                                        },
+                                        "expires_in": {
+                                            "type": "integer",
+                                            "example": 3600
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
         "/api/forgot-password": {
             "post": {
                 "tags": [
@@ -154,29 +400,146 @@
                 }
             }
         },
-        "/api/alba-homes": {
+        "/api/auth/google/url": {
             "get": {
                 "tags": [
-                    "Alba Homes"
+                    "Auth"
                 ],
-                "summary": "Get Alba Homes data",
-                "operationId": "40dab78928d9cb6f5f26f8cc0496f004",
+                "summary": "Get Google Auth URL",
+                "description": "Returns the URL to redirect the user to for Google Authentication.",
+                "operationId": "508c5a9a1dd2e3a5a4e6ae8c60eaa13b",
                 "responses": {
                     "200": {
                         "description": "Successful operation",
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "object"
+                                    "properties": {
+                                        "url": {
+                                            "type": "string",
+                                            "example": "https://accounts.google.com/o/oauth2/auth?client_id=..."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/auth/google/callback": {
+            "get": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Handle Google Auth Callback",
+                "description": "Exchanges the authorization code for a JWT token.",
+                "operationId": "e8d1d90904ec2d90b947961c525ac7ab",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "code"
+                                ],
+                                "properties": {
+                                    "code": {
+                                        "description": "The authorization code returned by Google",
+                                        "type": "string"
                                     }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Login successful",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "token": {
+                                            "type": "string",
+                                            "example": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9..."
+                                        },
+                                        "token_type": {
+                                            "type": "string",
+                                            "example": "bearer"
+                                        },
+                                        "expires_in": {
+                                            "type": "integer",
+                                            "example": 3600
+                                        },
+                                        "user": {
+                                            "$ref": "#/components/schemas/User"
+                                        }
+                                    },
+                                    "type": "object"
                                 }
                             }
                         }
                     },
-                    "500": {
-                        "description": "Server error"
+                    "400": {
+                        "description": "Invalid request"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                }
+            }
+        },
+        "/api/auth/social/exchange": {
+            "post": {
+                "tags": [
+                    "Auth"
+                ],
+                "summary": "Exchange temporary code for JWT token",
+                "operationId": "4b724bea47a83c67ec3a851213eabd2b",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "code"
+                                ],
+                                "properties": {
+                                    "code": {
+                                        "description": "Temporary code returned from callback",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Token exchanged successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "token": {
+                                            "type": "string"
+                                        },
+                                        "token_type": {
+                                            "type": "string",
+                                            "example": "bearer"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Missing or invalid code"
                     }
                 }
             }
@@ -187,7 +550,7 @@
                     "Users"
                 ],
                 "summary": "Get list of users",
-                "operationId": "c457726701591d1183b53aa71fc13441",
+                "operationId": "566aed8efb436ca506e0ef51a032ecd9",
                 "responses": {
                     "200": {
                         "description": "Successful operation",
@@ -208,7 +571,7 @@
                 },
                 "security": [
                     {
-                        "sanctum": []
+                        "bearerAuth": []
                     }
                 ]
             },
@@ -217,7 +580,7 @@
                     "Users"
                 ],
                 "summary": "Create a new user",
-                "operationId": "592819a0265360b2014512d6dbfaf0e7",
+                "operationId": "be551c1d694a01c164966f58bfa77013",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -242,12 +605,12 @@
                                     "password": {
                                         "type": "string",
                                         "format": "password",
-                                        "example": "password"
+                                        "example": "Secret@123"
                                     },
                                     "password_confirmation": {
                                         "type": "string",
                                         "format": "password",
-                                        "example": "password"
+                                        "example": "Secret@123"
                                     }
                                 },
                                 "type": "object"
@@ -275,7 +638,7 @@
                 },
                 "security": [
                     {
-                        "sanctum": []
+                        "bearerAuth": []
                     }
                 ]
             }
@@ -286,7 +649,7 @@
                     "Users"
                 ],
                 "summary": "Get user by ID",
-                "operationId": "36a33ff774d5cba33c039dec2c3e0287",
+                "operationId": "6f51bd5fa2dddcd25e44cfa53dcbd10a",
                 "parameters": [
                     {
                         "name": "id",
@@ -317,7 +680,7 @@
                 },
                 "security": [
                     {
-                        "sanctum": []
+                        "bearerAuth": []
                     }
                 ]
             },
@@ -326,7 +689,7 @@
                     "Users"
                 ],
                 "summary": "Update user by ID",
-                "operationId": "b9091397c8b25f12c6adb74be6ce3a5a",
+                "operationId": "070e37fc9aff78ae73860751bc990ed3",
                 "parameters": [
                     {
                         "name": "id",
@@ -356,13 +719,13 @@
                                         "description": "Optional: Only if you want to change the password",
                                         "type": "string",
                                         "format": "password",
-                                        "example": "new_password"
+                                        "example": "Secret@123"
                                     },
                                     "password_confirmation": {
                                         "description": "Required if password is provided",
                                         "type": "string",
                                         "format": "password",
-                                        "example": "new_password"
+                                        "example": "Secret@123"
                                     }
                                 },
                                 "type": "object"
@@ -393,7 +756,7 @@
                 },
                 "security": [
                     {
-                        "sanctum": []
+                        "bearerAuth": []
                     }
                 ]
             },
@@ -402,7 +765,7 @@
                     "Users"
                 ],
                 "summary": "Delete user by ID",
-                "operationId": "fa56cffde745d3f152f95cbacd936c0b",
+                "operationId": "0b4133ed462528a5e648b88ead11e929",
                 "parameters": [
                     {
                         "name": "id",
@@ -439,7 +802,7 @@
                 },
                 "security": [
                     {
-                        "sanctum": []
+                        "bearerAuth": []
                     }
                 ]
             }
@@ -487,6 +850,13 @@
             }
         },
         "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "name": "bearerAuth",
+                "in": "header",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
+            },
             "sanctum": {
                 "type": "apiKey",
                 "description": "Enter token in format (Bearer <token>)",
@@ -501,8 +871,8 @@
             "description": "Authentication"
         },
         {
-            "name": "Alba Homes",
-            "description": "Alba Homes"
+            "name": "Auth",
+            "description": "Auth"
         },
         {
             "name": "Users",

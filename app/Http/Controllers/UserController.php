@@ -10,63 +10,12 @@ use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
-    /**
-     * @OA\Get(
-     *      path="/api/users",
-     *      summary="Get list of users",
-     *      tags={"Users"},
-     *      security={{"sanctum":{}}},
-     *      @OA\Response(
-     *          response=200,
-     *          description="Successful operation",
-     *          @OA\JsonContent(
-     *              type="array",
-     *              @OA\Items(ref="#/components/schemas/User")
-     *          )
-     *      ),
-     *      @OA\Response(
-     *          response=401,
-     *          description="Unauthenticated"
-     *      )
-     * )
-     */
     public function index()
     {
         $users = User::all();
         return response()->json($users);
     }
 
-    /**
-     * @OA\Post(
-     *      path="/api/users",
-     *      summary="Create a new user",
-     *      tags={"Users"},
-     *      security={{"sanctum":{}}},
-     *      @OA\RequestBody(
-     *          required=true,
-     *          @OA\JsonContent(
-     *              required={"name","email","password","password_confirmation"},
-     *              @OA\Property(property="name", type="string", example="New User"),
-     *              @OA\Property(property="email", type="string", format="email", example="newuser@example.com"),
-     *              @OA\Property(property="password", type="string", format="password", example="password"),
-     *              @OA\Property(property="password_confirmation", type="string", format="password", example="password")
-     *          )
-     *      ),
-     *      @OA\Response(
-     *          response=201,
-     *          description="User created successfully",
-     *          @OA\JsonContent(ref="#/components/schemas/User")
-     *      ),
-     *      @OA\Response(
-     *          response=422,
-     *          description="Validation error"
-     *      ),
-     *      @OA\Response(
-     *          response=401,
-     *          description="Unauthenticated"
-     *      )
-     * )
-     */
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -88,33 +37,6 @@ class UserController extends Controller
         return response()->json($user, 201);
     }
 
-    /**
-     * @OA\Get(
-     *      path="/api/users/{id}",
-     *      summary="Get user by ID",
-     *      tags={"Users"},
-     *      security={{"sanctum":{}}},
-     *      @OA\Parameter(
-     *          name="id",
-     *          in="path",
-     *          required=true,
-     *          @OA\Schema(type="integer")
-     *      ),
-     *      @OA\Response(
-     *          response=200,
-     *          description="Successful operation",
-     *          @OA\JsonContent(ref="#/components/schemas/User")
-     *      ),
-     *      @OA\Response(
-     *          response=404,
-     *          description="User not found"
-     *      ),
-     *      @OA\Response(
-     *          response=401,
-     *          description="Unauthenticated"
-     *      )
-     * )
-     */
     public function show(string $id)
     {
         $user = User::find($id);
@@ -126,46 +48,6 @@ class UserController extends Controller
         return response()->json($user);
     }
 
-    /**
-     * @OA\Put(
-     *      path="/api/users/{id}",
-     *      summary="Update user by ID",
-     *      tags={"Users"},
-     *      security={{"sanctum":{}}},
-     *      @OA\Parameter(
-     *          name="id",
-     *          in="path",
-     *          required=true,
-     *          @OA\Schema(type="integer")
-     *      ),
-     *      @OA\RequestBody(
-     *          required=true,
-     *          @OA\JsonContent(
-     *              @OA\Property(property="name", type="string", example="Updated Name"),
-     *              @OA\Property(property="email", type="string", format="email", example="updated@example.com"),
-     *              @OA\Property(property="password", type="string", format="password", example="new_password", description="Optional: Only if you want to change the password"),
-     *              @OA\Property(property="password_confirmation", type="string", format="password", example="new_password", description="Required if password is provided")
-     *          )
-     *      ),
-     *      @OA\Response(
-     *          response=200,
-     *          description="User updated successfully",
-     *          @OA\JsonContent(ref="#/components/schemas/User")
-     *      ),
-     *      @OA\Response(
-     *          response=404,
-     *          description="User not found"
-     *      ),
-     *      @OA\Response(
-     *          response=422,
-     *          description="Validation error"
-     *      ),
-     *      @OA\Response(
-     *          response=401,
-     *          description="Unauthenticated"
-     *      )
-     * )
-     */
     public function update(Request $request, string $id)
     {
         $user = User::find($id);
@@ -194,35 +76,6 @@ class UserController extends Controller
         return response()->json($user);
     }
 
-    /**
-     * @OA\Delete(
-     *      path="/api/users/{id}",
-     *      summary="Delete user by ID",
-     *      tags={"Users"},
-     *      security={{"sanctum":{}}},
-     *      @OA\Parameter(
-     *          name="id",
-     *          in="path",
-     *          required=true,
-     *          @OA\Schema(type="integer")
-     *      ),
-     *      @OA\Response(
-     *          response=200,
-     *          description="User deleted successfully",
-     *          @OA\JsonContent(
-     *              @OA\Property(property="message", type="string", example="User deleted successfully")
-     *          )
-     *      ),
-     *      @OA\Response(
-     *          response=404,
-     *          description="User not found"
-     *      ),
-     *      @OA\Response(
-     *          response=401,
-     *          description="Unauthenticated"
-     *      )
-     * )
-     */
     public function destroy(string $id)
     {
         $user = User::find($id);

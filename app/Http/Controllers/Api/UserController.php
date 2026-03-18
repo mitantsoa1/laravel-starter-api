@@ -23,7 +23,24 @@ class UserController extends Controller
     }
 
     /**
-     * Afficher tous les utilisateurs.
+     * @OA\Get(
+     *      path="/api/users",
+     *      summary="Get list of users",
+     *      tags={"Users"},
+     *      security={{"bearerAuth":{}}},
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *          @OA\JsonContent(
+     *              type="array",
+     *              @OA\Items(ref="#/components/schemas/User")
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated"
+     *      )
+     * )
      */
     public function index(): JsonResponse
     {
@@ -34,7 +51,35 @@ class UserController extends Controller
     }
 
     /**
-     * Créer un nouvel utilisateur.
+     * @OA\Post(
+     *      path="/api/users",
+     *      summary="Create a new user",
+     *      tags={"Users"},
+     *      security={{"bearerAuth":{}}},
+     *      @OA\RequestBody(
+     *          required=true,
+     *          @OA\JsonContent(
+     *              required={"name","email","password","password_confirmation"},
+     *              @OA\Property(property="name", type="string", example="New User"),
+     *              @OA\Property(property="email", type="string", format="email", example="newuser@example.com"),
+     *              @OA\Property(property="password", type="string", format="password", example="Secret@123"),
+     *              @OA\Property(property="password_confirmation", type="string", format="password", example="Secret@123")
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=201,
+     *          description="User created successfully",
+     *          @OA\JsonContent(ref="#/components/schemas/User")
+     *      ),
+     *      @OA\Response(
+     *          response=422,
+     *          description="Validation error"
+     *      ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated"
+     *      )
+     * )
      */
     public function store(GenericRequest $request): JsonResponse
     {
@@ -51,7 +96,31 @@ class UserController extends Controller
     }
 
     /**
-     * Afficher un utilisateur spécifique.
+     * @OA\Get(
+     *      path="/api/users/{id}",
+     *      summary="Get user by ID",
+     *      tags={"Users"},
+     *      security={{"bearerAuth":{}}},
+     *      @OA\Parameter(
+     *          name="id",
+     *          in="path",
+     *          required=true,
+     *          @OA\Schema(type="integer")
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *          @OA\JsonContent(ref="#/components/schemas/User")
+     *      ),
+     *      @OA\Response(
+     *          response=404,
+     *          description="User not found"
+     *      ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated"
+     *      )
+     * )
      */
     public function show($id): JsonResponse
     {
@@ -62,7 +131,44 @@ class UserController extends Controller
     }
 
     /**
-     * Mettre à jour un utilisateur.
+     * @OA\Put(
+     *      path="/api/users/{id}",
+     *      summary="Update user by ID",
+     *      tags={"Users"},
+     *      security={{"bearerAuth":{}}},
+     *      @OA\Parameter(
+     *          name="id",
+     *          in="path",
+     *          required=true,
+     *          @OA\Schema(type="integer")
+     *      ),
+     *      @OA\RequestBody(
+     *          required=true,
+     *          @OA\JsonContent(
+     *              @OA\Property(property="name", type="string", example="Updated Name"),
+     *              @OA\Property(property="email", type="string", format="email", example="updated@example.com"),
+     *              @OA\Property(property="password", type="string", format="password", example="Secret@123", description="Optional: Only if you want to change the password"),
+     *              @OA\Property(property="password_confirmation", type="string", format="password", example="Secret@123", description="Required if password is provided")
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="User updated successfully",
+     *          @OA\JsonContent(ref="#/components/schemas/User")
+     *      ),
+     *      @OA\Response(
+     *          response=404,
+     *          description="User not found"
+     *      ),
+     *      @OA\Response(
+     *          response=422,
+     *          description="Validation error"
+     *      ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated"
+     *      )
+     * )
      */
     public function update(GenericRequest $request, $id): JsonResponse
     {
@@ -79,7 +185,33 @@ class UserController extends Controller
     }
 
     /**
-     * Supprimer un utilisateur.
+     * @OA\Delete(
+     *      path="/api/users/{id}",
+     *      summary="Delete user by ID",
+     *      tags={"Users"},
+     *      security={{"bearerAuth":{}}},
+     *      @OA\Parameter(
+     *          name="id",
+     *          in="path",
+     *          required=true,
+     *          @OA\Schema(type="integer")
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="User deleted successfully",
+     *          @OA\JsonContent(
+     *              @OA\Property(property="message", type="string", example="User deleted successfully")
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=404,
+     *          description="User not found"
+     *      ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthenticated"
+     *      )
+     * )
      */
     public function destroy($id): JsonResponse
     {
