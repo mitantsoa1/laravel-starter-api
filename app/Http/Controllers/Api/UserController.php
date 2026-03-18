@@ -7,6 +7,7 @@ use App\Services\UserService;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Http\Requests\GenericRequest;
+use App\Services\LogService;
 
 class UserController extends Controller
 {
@@ -16,8 +17,9 @@ class UserController extends Controller
      * Injection de dépendance du UserService (qui hérite de CrudService)
      * 
      * @param UserService $userService
+     * @param LogService $log
      */
-    public function __construct(UserService $userService)
+    public function __construct(UserService $userService, private readonly LogService $log)
     {
         $this->userService = $userService;
     }
@@ -45,7 +47,9 @@ class UserController extends Controller
     public function index(): JsonResponse
     {
         // On récupère les utilisateurs avec pagination (15 par page)
-        $users = $this->userService->paginate(15);
+        $users = $this->userService->all();
+
+        $this->log->action('user.index', ['users' => $users]);
 
         return response()->json($users);
     }
@@ -179,7 +183,15 @@ class UserController extends Controller
             $validatedData['password'] = bcrypt($validatedData['password']);
         }
 
-        $user = $this->userService->update($id, $validatedData);
+        try {
+            $user = $this->userService->update($id, $validatedData);
+            $this->log->action('user.update', ['userId' => $id]);
+        } catch (\Exception $e) {
+            $this->log->error('user.update', $e, ['userId' => $id]);
+            return response()->json([
+                'message' => $e->getMessage(),
+            ], 500);
+        }
 
         return response()->json($user);
     }
@@ -215,7 +227,15 @@ class UserController extends Controller
      */
     public function destroy($id): JsonResponse
     {
-        $this->userService->delete($id);
+        try {
+            $this->userService->delete($id);
+            $this->log->action('user.delete', ['userId' => $id]);
+        } catch (\Exception $e) {
+            $this->log->error('user.delete', $e, ['userId' => $id]);
+            return response()->json([
+                'message' => $e->getMessage(),
+            ], 500);
+        }
 
         return response()->json(null, 204);
     }

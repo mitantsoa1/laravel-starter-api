@@ -20,6 +20,8 @@ return Application::configure(basePath: dirname(__DIR__))
         ])->alias([
             'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         ]);
+
+        $middleware->append(\App\Http\Middleware\HttpLogMiddleware::class);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         $exceptions->render(function (AuthenticationException $e, Request $request) {
