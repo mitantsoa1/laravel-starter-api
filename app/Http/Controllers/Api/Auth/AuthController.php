@@ -4,9 +4,12 @@ namespace App\Http\Controllers\Api\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
-use App\Services\PasswordValidationService;
+use App\Http\Resources\UserResource;
+use App\Http\Requests\Auth\RegisterRequest;
+use App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\JsonResponse;
 
 class AuthController extends Controller
 {
@@ -41,33 +44,17 @@ class AuthController extends Controller
      *     )
      * )
      */
-    public function register(Request $request)
+    public function register(RegisterRequest $request): JsonResponse
     {
-        $validator = Validator::make($request->all(), [
-            'name'       => 'required|string|max:255',
-            'email'      => 'required|string|email|max:255|unique:users',
-            'password'   => PasswordValidationService::rules(),
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json(['errors' => $validator->errors()], 422);
-        }
-
         $user = User::create([
             'name'     => $request->name,
             'email'    => $request->email,
-            'password' => bcrypt($request->password),
+            'password' => $request->password, // Managed by 'hashed' cast in User model
         ]);
-        $credentials = [
-            'email' => $request->email,
-            'password' => $request->password,
-        ];
 
-        if (!$token = auth('api')->attempt($credentials)) {
-            return response()->json(['error' => 'Unauthorized'], 401);
-        }
+        $token = auth('api')->login($user);
 
-        return $this->respondWithTokenAndUser($token, auth('api')->user());
+        return $this->respondWithTokenAndUser($token, $user);
     }
 
     /**
@@ -103,12 +90,70 @@ class AuthController extends Controller
     {
         $credentials = $request->only('email', 'password');
 
-        if (!$token = auth('api')->attempt($credentials)) {
-            return response()->json(['error' => 'Unauthorized'], 401);
+        $user = User::where('email', $request->email)->first();
+
+        // Check if user is blocked
+        if ($user && $user->blocked_at) {
+            return response()->json([
+                'error' => 'Account blocked',
+                'message' => 'Blocked',
+                'is_blocked' => true,
+            ], 403);
         }
 
-        return $this->respondWithTokenAndUser($token, auth('api')->user());
+        // Check if email is verified
+        // if ($user && ! $user->email_verified_at) {
+        //     return response()->json([
+        //         'error' => 'Email not verified',
+        //         'message' => 'Veuillez vérifier votre adresse e-mail avant de vous connecter.',
+        //         'needs_verification' => true,
+        //     ], 403);
+        // }
+
+        /** @var \PHPOpenSourceSaver\JWTAuth\JWTGuard $guard */
+        $guard = auth('api');
+        if (! $token = $guard->attempt($credentials)) {
+            if ($user) {
+                $user->increment('login_attempts');
+                $attempts = $user->login_attempts;
+
+                if ($attempts >= 5) {
+                    $user->update(['blocked_at' => now()]);
+
+                    return response()->json([
+                        'error' => 'Account blocked',
+                        'message' => 'Votre compte est désormais bloqué suite à 5 tentatives infructueuses. Veuillez réinitialiser votre mot de passe.',
+                        'is_blocked' => true,
+                    ], 403);
+                }
+
+                if ($attempts >= 3) {
+                    $remaining = 5 - $attempts;
+
+                    return response()->json([
+                        'error' => 'Unauthorized',
+                        'message' => "Identifiants incorrects. Il vous reste $remaining tentatives.",
+                        'attempts_remaining' => $remaining,
+                    ], 401);
+                }
+            }
+
+            return response()->json([
+                'error' => 'Unauthorized',
+                'message' => 'Identifiants incorrects.',
+            ], 401);
+        }
+
+        /** @var \App\Models\User $user */
+        $user = $guard->user();
+
+        // Reset login attempts on successful login
+        $user->update(['login_attempts' => 0]);
+
+
+        return $this->respondWithTokenAndUser($token, $user);
     }
+
 
     /**
      * @OA\Post(
@@ -127,9 +172,9 @@ class AuthController extends Controller
      *     )
      * )
      */
-    public function profile()
+    public function profile(): UserResource
     {
-        return response()->json(auth('api')->user());
+        return new UserResource(auth('api')->user());
     }
 
     /**
@@ -192,11 +237,11 @@ class AuthController extends Controller
         ]);
     }
 
-    protected function respondWithTokenAndUser($token, $user)
+    protected function respondWithTokenAndUser($token, $user): JsonResponse
     {
         return response()->json([
             'access_token' => $token,
-            'user' => $user,
+            'user'         => new UserResource($user),
             'token_type'   => 'bearer',
             'expires_in'   => auth('api')->factory()->getTTL() * 60,
         ]);

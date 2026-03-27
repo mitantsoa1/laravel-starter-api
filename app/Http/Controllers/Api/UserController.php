@@ -7,6 +7,8 @@ use App\Services\UserService;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Http\Requests\GenericRequest;
+use App\Http\Resources\UserResource;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use App\Services\LogService;
 
 class UserController extends Controller
@@ -44,14 +46,14 @@ class UserController extends Controller
      *      )
      * )
      */
-    public function index(): JsonResponse
+    public function index(): AnonymousResourceCollection
     {
         // On récupère les utilisateurs avec pagination (15 par page)
-        $users = $this->userService->all();
+        $users = $this->userService->paginate(15);
 
-        $this->log->action('user.index', ['users' => $users]);
+        $this->log->action('user.index', ['count' => $users->count()]);
 
-        return response()->json($users);
+        return UserResource::collection($users);
     }
 
     /**
@@ -85,7 +87,7 @@ class UserController extends Controller
      *      )
      * )
      */
-    public function store(GenericRequest $request): JsonResponse
+    public function store(GenericRequest $request): UserResource
     {
         // La validation est gérée automatiquement par GenericRequest
         $validatedData = $request->validated();
@@ -96,7 +98,7 @@ class UserController extends Controller
         // Création via notre service Hérité
         $user = $this->userService->create($validatedData);
 
-        return response()->json($user, 201);
+        return new UserResource($user);
     }
 
     /**
@@ -126,12 +128,12 @@ class UserController extends Controller
      *      )
      * )
      */
-    public function show($id): JsonResponse
+    public function show($id): UserResource
     {
         // Trouvera l'utilisateur ou lancera une exception 404 (non trouvé)
         $user = $this->userService->find($id);
 
-        return response()->json($user);
+        return new UserResource($user);
     }
 
     /**
@@ -174,7 +176,7 @@ class UserController extends Controller
      *      )
      * )
      */
-    public function update(GenericRequest $request, $id): JsonResponse
+    public function update(GenericRequest $request, $id): UserResource|JsonResponse
     {
         $validatedData = $request->validated();
 
@@ -186,14 +188,13 @@ class UserController extends Controller
         try {
             $user = $this->userService->update($id, $validatedData);
             $this->log->action('user.update', ['userId' => $id]);
+            return new UserResource($user);
         } catch (\Exception $e) {
             $this->log->error('user.update', $e, ['userId' => $id]);
             return response()->json([
                 'message' => $e->getMessage(),
             ], 500);
         }
-
-        return response()->json($user);
     }
 
     /**
