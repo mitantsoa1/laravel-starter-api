@@ -127,6 +127,11 @@ return [
             'path' => storage_path('logs/laravel.log'),
         ],
 
-    ],
+        'controller' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/controller.log'),
+            'level' => 'debug',
+        ],
 
+    ],
 ];

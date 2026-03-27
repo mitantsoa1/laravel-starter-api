@@ -124,11 +124,15 @@ class LogService
      */
     protected function log(string $level, string $message, array $context, ?string $channel): void
     {
-        $logger = $channel
-            ? Log::channel($channel)
-            : Log::channel($this->defaultChannel);
+        // Enregistrer dans le channel demandé ou par défaut (souvent 'stack' -> laravel.log)
+        $defaultLogger = $channel ? Log::channel($channel) : Log::channel($this->defaultChannel);
+        $defaultLogger->{$level}($message, $context);
 
-        $logger->{$level}($message, $context);
+        // Enregistrer TOUJOURS dans le channel 'controller' (controller.log)
+        // en plus du log général, comme demandé par l'utilisateur.
+        if ($channel !== 'controller') {
+            Log::channel('controller')->{$level}($message, $context);
+        }
     }
 
     /**
