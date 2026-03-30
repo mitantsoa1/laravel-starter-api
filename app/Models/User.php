@@ -22,7 +22,12 @@ class User extends Authenticatable implements JWTSubject
     protected $fillable = [
         'name',
         'email',
+        'google_id',
+        'avatar',
+        'role',
         'password',
+        'login_attempts',
+        'blocked_at',
     ];
 
     /**
@@ -45,6 +50,8 @@ class User extends Authenticatable implements JWTSubject
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'blocked_at' => 'datetime',
+            'login_attempts' => 'integer',
         ];
     }
 

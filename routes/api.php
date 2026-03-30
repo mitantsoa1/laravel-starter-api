@@ -36,10 +36,16 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/user', function (Request $request) {
         return $request->user();
     });
+    Route::get('/profile', [AuthController::class, 'profile']);
     Route::post('/profile', [AuthController::class, 'profile']);
+    Route::post('/profile/password', [AuthController::class, 'changePassword']);
+    Route::post('/profile/avatar', [AuthController::class, 'uploadAvatar']);
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::post('/refresh', [AuthController::class, 'refresh']); // Added refresh route
 
     // User Resource Routes
     Route::apiResource('users', UserController::class);
+
+    // Dashboard Statistics
+    Route::get('/dashboard/stats', [\App\Http\Controllers\Api\DashboardController::class, 'index']);
 });

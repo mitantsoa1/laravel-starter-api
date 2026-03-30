@@ -172,9 +172,104 @@ class AuthController extends Controller
      *     )
      * )
      */
-    public function profile(): UserResource
+    public function profile(Request $request): UserResource
     {
-        return new UserResource(auth('api')->user());
+        $user = auth('api')->user();
+
+        if ($request->isMethod('post') && $request->has('name')) {
+            $request->validate([
+                'name' => 'required|string|max:255',
+            ]);
+            $user->update(['name' => $request->name]);
+        }
+
+        return new UserResource($user);
+    }
+
+    /**
+     * @OA\Post(
+     *     path="/api/profile/password",
+     *     summary="Change authenticated user's password",
+     *     tags={"Authentication"},
+     *     security={{"bearerAuth":{}}},
+     *     @OA\RequestBody(
+     *         required=true,
+     *         @OA\JsonContent(
+     *             required={"current_password","password","password_confirmation"},
+     *             @OA\Property(property="current_password", type="string"),
+     *             @OA\Property(property="password", type="string", minLength=8),
+     *             @OA\Property(property="password_confirmation", type="string")
+     *         )
+     *     ),
+     *     @OA\Response(response=200, description="Password changed successfully"),
+     *     @OA\Response(response=422, description="Validation error or wrong current password"),
+     *     @OA\Response(response=401, description="Unauthorized")
+     * )
+     */
+    public function changePassword(Request $request): JsonResponse
+    {
+        $request->validate([
+            'current_password'      => 'required|string',
+            'password'              => 'required|string|min:8|confirmed',
+        ]);
+
+        /** @var \App\Models\User $user */
+        $user = auth('api')->user();
+
+        if (!\Illuminate\Support\Facades\Hash::check($request->current_password, $user->password)) {
+            return response()->json([
+                'message' => 'The current password is incorrect.',
+                'errors'  => ['current_password' => ['The current password is incorrect.']],
+            ], 422);
+        }
+
+        $user->update(['password' => bcrypt($request->password)]);
+
+        return response()->json(['message' => 'Password changed successfully']);
+    }
+
+    /**
+     * @OA\Post(
+     *     path="/api/profile/avatar",
+     *     summary="Upload a new avatar for the authenticated user",
+     *     tags={"Authentication"},
+     *     security={{"bearerAuth":{}}},
+     *     @OA\RequestBody(
+     *         required=true,
+     *         @OA\MediaType(
+     *             mediaType="multipart/form-data",
+     *             @OA\Schema(
+     *                 @OA\Property(property="avatar", type="string", format="binary")
+     *             )
+     *         )
+     *     ),
+     *     @OA\Response(response=200, description="Avatar updated successfully"),
+     *     @OA\Response(response=422, description="Validation error"),
+     *     @OA\Response(response=401, description="Unauthorized")
+     * )
+     */
+    public function uploadAvatar(Request $request): JsonResponse
+    {
+        $request->validate([
+            'avatar' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:4096',
+        ]);
+
+        /** @var \App\Models\User $user */
+        $user = auth('api')->user();
+
+        if ($request->hasFile('avatar')) {
+            $path = $request->file('avatar')->store('avatars', 'public');
+            $url = asset('storage/' . $path);
+            
+            $user->update(['avatar' => $url]);
+
+            return response()->json([
+                'message' => 'Avatar updated successfully',
+                'avatar'  => $url
+            ]);
+        }
+
+        return response()->json(['message' => 'Failed to upload image'], 400);
     }
 
     /**

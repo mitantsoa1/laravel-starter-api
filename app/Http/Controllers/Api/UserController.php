@@ -49,7 +49,7 @@ class UserController extends Controller
     public function index(): AnonymousResourceCollection
     {
         // On récupère les utilisateurs avec pagination (15 par page)
-        $users = $this->userService->paginate(15);
+        $users = $this->userService->all();
 
         $this->log->action('user.index', ['count' => $users->count()]);
 

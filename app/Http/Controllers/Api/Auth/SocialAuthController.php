@@ -92,8 +92,16 @@ class SocialAuthController extends Controller
             ->first();
 
         if ($user) {
+            $changed = false;
             if (!$user->google_id) {
                 $user->google_id = $socialUser->getId();
+                $changed = true;
+            }
+            if (!$user->avatar && $socialUser->getAvatar()) {
+                $user->avatar = $socialUser->getAvatar();
+                $changed = true;
+            }
+            if ($changed) {
                 $user->save();
             }
         } else {
