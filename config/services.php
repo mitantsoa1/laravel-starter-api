@@ -47,4 +47,9 @@ return [
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
         'redirect' => env('GOOGLE_REDIRECT_URI'),
     ],
+    'umami' => [
+        'url' => env('UMAMI_URL'),
+        'token' => env('UMAMI_TOKEN'),
+        'website_id' => env('UMAMI_WEBSITE_ID'),
+    ],
 ];

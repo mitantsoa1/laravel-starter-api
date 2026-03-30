@@ -46,6 +46,18 @@ Route::middleware('auth:api')->group(function () {
     // User Resource Routes
     Route::apiResource('users', UserController::class);
 
+    // Umami
+
+    Route::prefix('analytics/umami')->group(function () {
+        Route::get('/stats', [\App\Http\Controllers\Api\UmamiController::class, 'getStats']);
+        Route::get('/pageviews', [\App\Http\Controllers\Api\UmamiController::class, 'getPageViews']);
+        Route::get('/metrics', [\App\Http\Controllers\Api\UmamiController::class, 'getMetrics']);
+        Route::get('/metrics/expanded', [\App\Http\Controllers\Api\UmamiController::class, 'getExpandedMetrics']);
+        Route::get('/events', [\App\Http\Controllers\Api\UmamiController::class, 'getEvents']);
+        Route::get('/events/series', [\App\Http\Controllers\Api\UmamiController::class, 'getEventSeries']);
+        Route::get('/active', [\App\Http\Controllers\Api\UmamiController::class, 'getActive']);
+    });
+
     // Dashboard Statistics
     Route::get('/dashboard/stats', [\App\Http\Controllers\Api\DashboardController::class, 'index']);
 });
