@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\Auth\AuthController;
 use App\Http\Controllers\Api\Auth\PasswordResetController;
 use App\Http\Controllers\Api\HomeController; // Import HomeController
 use App\Http\Controllers\Api\UserController;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,26 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/forgot-password', [PasswordResetController::class, 'forgotPassword']);
 Route::post('/reset-password', [PasswordResetController::class, 'resetPassword']);
+Route::post('/verification/resend', [AuthController::class, 'resendVerificationNotification']);
+Route::get('/email/verify/{id}/{hash}', function (Request $request) {
+    $user = User::findOrFail($request->route('id'));
+
+    if (! hash_equals((string) $request->route('hash'), sha1($user->getEmailForVerification()))) {
+        return response()->json(["message" => "Lien de vérification invalide."], 403);
+    }
+
+    if (! $user->hasVerifiedEmail()) {
+        $user->markEmailAsVerified();
+        event(new \Illuminate\Auth\Events\Verified($user));
+    }
+
+    if ($request->wantsJson()) {
+        return response()->json(['message' => 'Votre adresse e-mail a été vérifiée avec succès.']);
+    }
+
+    // Redirect to frontend login with a success parameter (fallback for browser clicks)
+    return redirect(env('FRONTEND_URL', 'http://localhost:3000') . '/login?verified=1');
+})->middleware(['signed'])->name('verification.verify');
 Route::get('/alba-homes', [HomeController::class, 'albaHomesAllData']); // Added Alba Homes route
 
 Route::get('/auth/google/url', [\App\Http\Controllers\Api\Auth\SocialAuthController::class, 'redirectToGoogle']);

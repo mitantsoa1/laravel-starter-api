@@ -52,9 +52,12 @@ class AuthController extends Controller
             'password' => $request->password, // Managed by 'hashed' cast in User model
         ]);
 
-        $token = auth('api')->login($user);
+        event(new \Illuminate\Auth\Events\Registered($user));
 
-        return $this->respondWithTokenAndUser($token, $user);
+        return response()->json([
+            'message' => 'Utilisateur enregistré avec succès. Veuillez vérifier votre e-mail pour confirmer votre compte.',
+            'user'    => new UserResource($user),
+        ], 201);
     }
 
     /**
@@ -101,14 +104,6 @@ class AuthController extends Controller
             ], 403);
         }
 
-        // Check if email is verified
-        // if ($user && ! $user->email_verified_at) {
-        //     return response()->json([
-        //         'error' => 'Email not verified',
-        //         'message' => 'Veuillez vérifier votre adresse e-mail avant de vous connecter.',
-        //         'needs_verification' => true,
-        //     ], 403);
-        // }
 
         /** @var \PHPOpenSourceSaver\JWTAuth\JWTGuard $guard */
         $guard = auth('api');
@@ -147,11 +142,58 @@ class AuthController extends Controller
         /** @var \App\Models\User $user */
         $user = $guard->user();
 
+        // Check if email is verified
+        if (! $user->hasVerifiedEmail()) {
+            $guard->logout(); // Logout to invalidate the token we just got
+
+            return response()->json([
+                'error' => 'Email not verified',
+                'message' => 'Votre adresse e-mail n\'est pas encore vérifiée. Veuillez consulter votre boîte de réception pour le lien de confirmation.',
+                'needs_verification' => true,
+            ], 403);
+        }
+
         // Reset login attempts on successful login
         $user->update(['login_attempts' => 0]);
 
 
         return $this->respondWithTokenAndUser($token, $user);
+    }
+
+    /**
+     * @OA\Post(
+     *     path="/api/verification/resend",
+     *     summary="Resend verification email",
+     *     tags={"Authentication"},
+     *     @OA\RequestBody(
+     *         required=true,
+     *         @OA\JsonContent(
+     *             required={"email"},
+     *             @OA\Property(property="email", type="string", format="email", example="john@example.com")
+     *         )
+     *     ),
+     *     @OA\Response(response=200, description="Verification link sent"),
+     *     @OA\Response(response=404, description="User not found"),
+     *     @OA\Response(response=400, description="Email already verified")
+     * )
+     */
+    public function resendVerificationNotification(Request $request): JsonResponse
+    {
+        $request->validate(['email' => 'required|email']);
+
+        $user = User::where('email', $request->email)->first();
+
+        if (! $user) {
+            return response()->json(['message' => 'Utilisateur non trouvé.'], 404);
+        }
+
+        if ($user->hasVerifiedEmail()) {
+            return response()->json(['message' => 'Votre adresse e-mail est déjà vérifiée.'], 400);
+        }
+
+        $user->sendEmailVerificationNotification();
+
+        return response()->json(['message' => 'Le lien de confirmation a été renvoyé.']);
     }
 
 
