@@ -364,6 +364,30 @@ class AuthController extends Controller
         return $this->respondWithTokenAndUser(auth('api')->refresh(), auth('api')->user());
     }
 
+    /**
+     * @OA\Delete(
+     *     path="/api/profile",
+     *     summary="Delete authenticated user's account",
+     *     tags={"Authentication"},
+     *     security={{"bearerAuth":{}}},
+     *     @OA\Response(response=200, description="Account deleted successfully"),
+     *     @OA\Response(response=401, description="Unauthorized")
+     * )
+     */
+    public function deleteAccount(Request $request): JsonResponse
+    {
+        /** @var \App\Models\User $user */
+        $user = auth('api')->user();
+
+        // Perform soft delete
+        $user->delete();
+
+        // Invalidate the token
+        auth('api')->logout();
+
+        return response()->json(['message' => 'Your account has been deleted successfully.']);
+    }
+
     // Return token response structure
     protected function respondWithToken($token)
     {
